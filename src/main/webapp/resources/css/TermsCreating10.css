@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Для body установить шрифт по умолчанию, его размер и цвет,
+скачать можно Google fonts*/
+body {
+
+    /*Базовый шрифт и размер, скачать и ссылку поставить перед css файлом*/
+    font-family: 'Roboto', sans-serif;
+
+    /*Про размеры шрифтов https://learn.javascript.ru/css-units*/
+    font-size: 18px;
+    color: #000;
+
+    /*Обнулить отступы для body, но на внутрение элементы это не влияет*/
+    padding: 0;
+    margin: 0;
+
+    /*  Цвет фона*/
+    background: #FCFDFC;
+}
+.container {
+    width: 1072px;
+    margin: 0 auto;
+    /* Границы блоков */
+    /*border: 1px solid #000;*/
+}
+
+ul, li, h1, h2 {
+    /*Блочные свойства и обнуление отступов браузеров - делать по умолчанию для любой верстки*/
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /*Убрать маркеры (точки) со списков в меню*/
+    list-style-type: none;
+}
+
+/*меню*/
+.menu{
+    margin-bottom: 29px;
+    margin-top: 35px;
+}
+/*Стилизуем меню по БЭМ*/
+
+a{
+    /*Убрать стиль ссылок*/
+    text-decoration: none;
+    /*Цвет текста ссылок*/
+    color: #000;
+}
+
+.nav, .menu{
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    align-items: center;
+}
+
+/*Блок*/
+.menu{
+    /*  Растянуть блок*/
+    width: 100%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+}
+
+/*Делаем расстояние оот логотипа в право*/
+img {
+    margin-right: 33px;
+}
+.background{
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    left: 525px;
+    top: 112px;
+}
+.background1{
+    position: absolute;
+    width: 152px;
+    height: 139px;
+    left: 1204px;
+    top: 108px;
+}
+/*Расстояние между ссылками в меню*/
+.a{
+    /*position: absolute;*/
+    width: 109px;
+    height: 27px;
+    /*left: 340px;*/
+    /*top: 35px;*/
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    color: #000000;
+    margin-right:55px;
+}
+.b {
+    /*position: absolute;*/
+    width: 49px;
+    height: 27px;
+    left: 486px;
+    top: 35px;
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    color: #000000;
+
+    margin-right: 750px;
+}
+    .c{
+        /*position: absolute;*/
+        width: 55px;
+        height: 27px;
+        /*left: 1285px;*/
+        top: 35px;
+
+        font-family: 'Circe';
+        font-style: normal;
+        font-weight: 350;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+        text-align: right;
+        color: #000000;
+}
+
+/*Активация при наведении на ссылку*/
+/*hover - при наведении мышки*/
+.menu__item_active:hover {
+    /*появляется подчеркивание*/
+    border-bottom: 2px solid #2266DA;
+    /* и перекрашивается цвет*/
+    color: #2266DA;
+}
+/*Надписи заголовок и строка*/
+h1 {
+    /*position: absolute;*/
+    /*width: 1071px;*/
+    /*height: 66px;*/
+    left: 184px;
+    top: 109px;
+    text-align: center;
+    font-family: 'Circe';
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 66px;
+    color: #000000;
+}
+
+h2{
+    font-size:20px ;
+    font-weight: 350;
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+    font-family: 'Circe';
+    font-style: normal;
+}
+
+/*выстраиваем элементы в одну строку*/
+.bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/*Кнопка серая*/
+.b1 {
+    /*  Размеры кнопки*/
+
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 54px;
+    left: 570px;
+    top: 284px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border: 1px solid #000000;
+
+    /*Закругление формы кнопки*/
+    border-radius: 500px;
+
+    /*Расстояние от текста до границы*/
+    padding:14px 0;
+
+    /*Сделать текст в верхнем регистре, цвет и стиль*/
+    /*text-transform: uppercase;*/
+    color: #757575;
+    font-weight:400;
+    font-size:15px;
+    line-height:22px;
+
+    /*Задаем свойство блоков ссылкам кнопкам*/
+    display: block;
+
+    /* Фон кнопки*/
+    background: #FCFDFC;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-left: 25px;
+
+}
+
+/*Активация при наведении на кнопки*/
+/*Правильно сделать btn_active*/
+.b1:hover {
+    /*Красим фон*/
+    background:#757575;
+    /*  Делаем прозрачность*/
+    opacity: 0.7;
+    /*  перекрашиваем шрифт что бы был виден*/
+    color: #FFF;
+    /*  Делаем тень*/
+    /*box-shadow:#757575 ;*/
+}
+
+.li1{
+    /*position: absolute;*/
+    width: 171px;
+    height: 22px;
+    left: 374px;
+    top: 300px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+    margin-top: 56px;
+    margin-left: 190px;
+}
+.li2{
+    width: 163px;
+    height: 22px;
+    left: 374px;
+    top: 382px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+    margin-top: 60px;
+    margin-left: 190px;
+}
+/*таблица скролл*/
+.li3{
+    overflow-y: scroll;
+    /*box-sizing: border-box;*/
+    /*position: absolute;*/
+    width: 300px;
+    height: 311px;
+    left: 570px;
+    top: 378px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-left: 33px;
+    margin-top: 40px;
+}
+/*форма прокрутки*/
+
+/*задаем цвет фона и толщину полосы*/
+.li3::-webkit-scrollbar {
+    box-sizing: border-box;
+    position: absolute;
+    width: 14px;
+    height: 16px;
+
+    background: #FCFDFC;
+    opacity: 0.9;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transform: rotate(-90deg);
+}
+/*цвет и размер бегунка*/
+.li3::-webkit-scrollbar-thumb {
+
+    position: absolute;
+    height:18px;
+    width: 8px;
+    left: 3px;
+    top: 5px;
+    margin: 0;
+    background: #2575FC;
+    border-radius: 5px;
+    border: 1px solid #2575FC;
+}
+
+/*текст внутри прокрутки*/
+.text{
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p{
+    background:#FFF;
+    color: #757575;
+}
+/*link, visited,hover, active*/
+p:hover{
+    background:#757575;
+    opacity: 50%;
+    /*  перекрашиваем шрифт что бы был виден*/
+    color: #FFF;
+    transform: revert;
+}
+
+/*красная кнопка*/
+.b2 {
+    box-sizing: border-box;
+    /*display: block;*/
+
+    /*position: absolute;*/
+    width: 300px;
+    height: 70px;
+    left: 570px;
+    top: 729px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border: 1px solid #FF3300;
+
+    /*Закругление формы кнопки*/
+    border-radius: 500px;
+    /*Расстояние от текста до границы*/
+    padding:24px 0;
+
+    /*Сделать текст в верхнем регистре, цвет и стиль*/
+    /*text-transform: uppercase;*/
+    color: #FF3300;
+    font-weight:400;
+    font-size:15px;
+    line-height:24px;
+
+    /*выравнивание текста и его размера*/
+    text-align: center;
+
+    /*Задаем свойство блоков ссылкам кнопкам*/
+    display: block;
+
+    /* Оттолкнем кнопку*/
+    margin-top: 40px;
+    margin-left: 385px;
+
+    /* Фон кнопки*/
+    background: #FCFDFC;
+
+}
+/*Активация при наведении на кнопки*/
+/*Правильно сделать btn_active*/
+.b2:hover {
+    /*Красим фон*/
+    background:#FF3300;
+    /*  Делаем прозрачность*/
+    opacity: 0.9;
+    /*  перекрашиваем шрифт что бы был виден*/
+    text-color: #FFF;
+    /*  Делаем тень*/
+    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+}
+
+
+

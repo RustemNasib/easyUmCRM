@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+}
+
+/*5. Для body установить шрифт по умолчанию, его размер и цвет,
+скачать можно Google fonts*/
+body {
+
+    /*Базовый шрифт и размер, скачать и ссылку поставить перед css файлом*/
+    font-family: 'Roboto', sans-serif;
+
+    /*Про размеры шрифтов https://learn.javascript.ru/css-units*/
+    font-size: 18px;
+    color: #000;
+
+    /*Обнулить отступы для body, но на внутрение элементы это не влияет*/
+    padding: 0;
+    margin: 0;
+
+    /*  Цвет фона*/
+    background: #FCFDFC;
+}
+
+.container {
+    width: 1072px;
+    margin: 0 auto;
+
+    /* Границы блоков */
+    /*border: 1px solid #000;*/
+}
+
+ul, li, h1, h2 {
+    /*Блочные свойства и обнуление отступов браузеров - делать по умолчанию для любой верстки*/
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /*Убрать маркеры (точки) со списков в меню*/
+    list-style-type: none;
+}
+
+h1 {
+    /*position: absolute;*/
+    width: 1071px;
+    height: 66px;
+    left: 184px;
+    top: 109px;
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 66px;
+
+    color: #000000;
+    text-align: center;
+    margin-top: 29px;
+    /*margin-bottom: 40px;*/
+}
+h2{
+
+    width: 474px;
+    height: 29px;
+    left: 184px;
+    top: 215px;
+margin-top: 40px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+}
+
+/*меню*/
+.menu{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/*Стилизуем меню по БЭМ*/
+a{
+    /*Убрать стиль ссылок*/
+    text-decoration: none;
+    /*Цвет текста ссылок*/
+    color: #000;
+}
+
+.nav, .menu{
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    align-items: center;
+}
+
+/*Блок*/
+.menu{
+    /*  Растянуть блок*/
+    width: 100%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+}
+.menu__item{
+    color: #000;
+}
+
+/*Делаем расстояние от логотипа в право*/
+img {
+    margin-right: 33px;
+}
+/*картинки на заднем плане*/
+.background{
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    left: 624px;
+    top: 104px;
+}
+
+.background1{
+    position: absolute;
+    width: 152px;
+    height: 139px;
+    left: 1310px;
+    top: 114px;
+}
+
+.nav{
+    margin-bottom: 29px;
+    margin-top: 18px;
+}
+
+/*Активация при наведении на ссылку*/
+/*hover - при наведении мышки*/
+.menu__item_active:hover {
+    /*появляется подчеркивание*/
+    border-bottom: 2px solid #2266DA;
+    /* и перекрашивается цвет*/
+    color: #2266DA;
+}
+
+/*Делем таблицу*/
+th, td{
+    /*  Обводка ячеек*/
+    border: 1px solid #2575FC;
+}
+/*таблица1*/
+.table1{
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 3px 5px 5px rgba(34, 102,218,0.2);
+    /*position: absolute;*/
+    /*width: 1071px;*/
+    height: 114px;
+    left: 184px;
+    top: 259px;
+    background: #2575FC;
+    border: 1px solid #2266DA;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+/*таблица2*/
+table{
+    width: 505px;
+    height: 395px;
+    /*Убрать промежутки между обводками*/
+    border-collapse: collapse;
+    /*  Расстягиваем таблицу на ширину блока container*/
+    /*width: 100%;*/
+    /*  Тень таблицы*/
+    box-shadow: 3px 5px 5px rgba(34, 102,218,0.2);
+    /* Отступаем от заголовка*/
+    box-sizing: border-box;
+    /*position: absolute;*/
+    left: 184px;
+    top: 413px;
+    background: #2575FC;
+    border: 1px solid #2266DA;
+    margin-bottom: 109px;
+}
+/*верхняя строка*/
+thead {
+    /*Красим верхнюю строку таблицы и шрифт*/
+    background: #2575FC;
+    color: #FFF;
+    /*сдвиг текста верней строки налево*/
+    text-align: left;
+    /*размер шрифта текста*/
+}
+/*тело таблицы*/
+tbody{
+    background: #F0F2F5;
+}
+.td {
+    /*  Отступы в ячейках*/
+    padding: 37px 0 15px 15px; (верх право низ лево)
+font-size: 18px;
+}
+
+
+.but{
+    box-sizing: border-box;
+    width: 566px;
+    height: 395px;
+    top: 413px;
+}
+.bot{
+    /*margin-top: 40px;*/
+    /*margin-left: 40px;*/
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    /*align-items: center;*/
+    width: 100%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+}
+
+
+.li3{
+    /*position: absolute;*/
+    width: 151px;
+    height: 29px;
+    left: 729px;
+    top: 413px;
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+    margin-left: 40px;
+    font-style: normal;
+}
+.li4 {
+    /*box-sizing: border-box;*/
+    /*position: absolute;*/
+    width: 190px;
+    height: 29px;
+    /*left: 920px;*/
+    /*top: 413px;*/
+    background: #F0F2F5;
+    border: 1px solid #2266DA;
+    /*font-style: normal;*/
+}
+/*текст*/
+.txt{
+    width: 84px;
+    height: 28px;
+    left: 9px;
+    top: 1px;
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 19px;
+    line-height: 28px;
+    color: #000000;
+}
+/*синий кубик*/
+.check__item {
+    /*box-sizing: border-box;*/
+    position: absolute;
+    width: 29px;
+        height: 29px;
+        /*left: 141px;*/
+        top: 454px;
+    margin-left: 160px;
+    margin-bottom: 35px;
+        background: #2575FC;
+        border: 1px solid #2266DA;
+}
+
+/*красная кнопка*/
+
+.text{
+    width: 145px;
+    height: 29px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    line-height: 21px;
+    color: #FF3300;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border:1px solid #FF3300;
+    /*Расстояние от текста до границы*/
+    padding:14px 0;
+    /*Закругление формы кнопки*/
+    border-radius:500px;
+    /*выравниваем текст по центру*/
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.text:hover{
+    /*  перекрашиваем шрифт что бы был виден*/
+    color: #FFF;
+    /*Красим фон*/
+    background:#FF3300;
+    /*  Делаем прозрачность*/
+    opacity: 0.9;
+    /*  Делаем тень*/
+    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+}
+
+.but{
+    /*box-sizing: border-box;*/
+    width: 567px;
+    height: 129px;
+    top: 413px;
+
+}
+
+.bot{
+    /*Горизональное выравнивание по центру*/
+    /*align-items: center;*/
+    /*width: 100%;*/
+    /*растягиваем в разные стороны*/
+    /*justify-content: space-between;*/
+    /*margin-top: 40px;*/
+    /*margin-left: 40px;*/
+    /*display: flex;*/
+    margin-bottom: 40px;
+}
+
+
+
+.li6{
+    width: 336px;
+    height: 29px;
+    /*left: 729px;*/
+    /*top: 482px;*/
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+    margin-left: 40px;
+}

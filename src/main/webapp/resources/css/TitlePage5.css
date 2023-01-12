@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*Базовый шрифт и размер, скачать и ссылку поставить перед css файлом*/
+    font-family: 'Roboto', sans-serif;
+
+    /*Про размеры шрифтов https://learn.javascript.ru/css-units*/
+    font-size: 18px;
+    color: #000;
+
+    /*Обнулить отступы для body, но на внутрение элементы это не влияет*/
+    padding: 0;
+    margin: 0;
+
+    /*  Цвет фона*/
+    background: #FCFDFC;
+}
+
+.container {
+    width: 1072px;
+    margin: 0 auto;
+
+    /* Границы блоков */
+    /*border: 1px solid #000;*/
+}
+
+ul, li, h1, h2, h3, h4 {
+    /*Блочные свойства и обнуление отступов браузеров - делать по умолчанию для любой верстки*/
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /*Убрать маркеры (точки) со списков в меню*/
+    list-style-type: none;
+}
+
+.li1 {
+    font-size: 18px;
+    width: 108px;
+    height: 27px;
+    margin-left: 35px;
+    margin-right: 854px;
+}
+
+h1 {
+    width: 1083px;
+    height: 66px;
+    font-size: 41px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Circe';
+
+}
+
+/*меню*/
+.menu {
+    margin-bottom: 29px;
+    margin-top: 18px;
+    /*  Растянуть блок*/
+    width: 100%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+}
+
+.nav, .menu {
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    align-items: center;
+}
+
+.menu1 {
+    margin-top: 40px;
+    margin-left: 200px;
+
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    align-items: center;
+    width: 50%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+    color: #FF3300;
+}
+
+
+/*Стилизуем меню по БЭМ*/
+a {
+    /*Убрать стиль ссылок*/
+    text-decoration: none;
+    /*Цвет текста ссылок*/
+    color: #000;
+}
+
+a1 {
+    margin-right: 160px;
+    font-style: normal;
+    font-family: 'Circe';
+    font-size: 24px;
+    Line-height: 35px;
+    weight: 350px;
+    color: #FF3300;
+    /*margin-left: 185px;*/
+    /*margin-right: 185px;*/
+}
+
+.menu_active:hover {
+    background: #FF3300;
+    opacity: 0.9;
+    color: #fff;
+
+    box-shadow: 3px 5px 10px rgba(255, 51, 0, 0.6);
+}
+
+
+/*Делаем расстояние оот логотипа в право*/
+img {
+    margin-right: 35px;
+}
+
+.background {
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    left: 555px;
+    top: 104px;
+}
+
+.background1 {
+    position: absolute;
+    width: 152px;
+    height: 139px;
+    left: 1195px;
+    top: 114px;
+}
+
+/*Блочные и строчные элементы
+div и большинство элементов являются блочными и стремяться растянуться на всю ширину экрана
+a, img, span - строчные элементы и они не стремяться в одного знанять всю линию ширины экрана, а растягиваются под ширину контента
+ Строчные элементы имеют свойство display: inline
+ Блочные элементы имеют свойство display: block
+*/
+
+.nav {
+    margin-bottom: 29px;
+    margin-top: 18px;
+}
+
+/*Активация при наведении на ссылку*/
+/*hover - при наведении мышки*/
+.menu__item_active:hover {
+    /*появляется подчеркивание*/
+    border-bottom: 2px solid #2266DA;
+    /* и перекрашивается цвет*/
+    color: #2266DA;
+}
+.btn {
+    /*Размеры кнопки*/
+    width: 488px;
+    height: 54px;
+
+    /*Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки*/
+    border: 1px solid #FF3300;
+    border-radius: 500px;
+
+    /*Расстояние от текста до гарницы*/
+    padding: 14px 0;
+
+    /*Сделать текст в верхнем регистре и цвет и стиль*/
+    text-transform: uppercase;
+    color: #FF3300;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 15px;
+
+    /*Выравнивание текста и размер*/
+    text-align: center;
+
+
+    /*Задаем свойство блоков ссылкам (кнопкам)*/
+    display: block;
+
+    /*Оттолкнем нижнии кнопки от верхних*/
+    margin-bottom: 25px;
+
+    /*Фон кнопки*/
+    background: #FCFDFC;
+    opacity: 0.9;
+
+    /*Тень для кнопки*/
+    box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.2);
+}
+.btn-mini{
+    width: 250px;
+}
+
+.buttons {
+    /*Свойства для родителя блочных элементов для выравнивания*/
+    display: flex;
+    /*https://developer.mozilla.org/ru/docs/Web/CSS/justify-content*/
+
+    /*Ширина зоны с кнопками*/
+    width: 1014px;
+
+    /*Растянуть контент по краям*/
+    justify-content: space-between;
+
+    /*Отступ от заголовка до кнопок*/
+    margin-top: 40px;
+}
+/*Активация при наведении на кнопку*/
+.btn:hover {
+    background: #FF3300;
+    opacity: 0.9;
+    color: #fff;
+
+    box-shadow: 3px 5px 10px rgba(255,51,0, 0.6);
+}

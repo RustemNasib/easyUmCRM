@@ -1,0 +1,249 @@
+* {
+   box-sizing: border-box;
+}
+
+/* Для body установить шрифт по умолчанию, его размер и цвет,
+скачать можно Google fonts*/
+body {
+
+    /*Базовый шрифт и размер, скачать и ссылку поставить перед css файлом*/
+    font-family: 'Roboto', sans-serif;
+
+    /*Про размеры шрифтов https://learn.javascript.ru/css-units*/
+    font-size: 18px;
+    color: #000;
+
+    /*Обнулить отступы для body, но на внутрение элементы это не влияет*/
+    padding: 0;
+    margin: 0;
+
+    /*  Цвет фона*/
+    background: #FCFDFC;
+}
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    /* Границы блоков */
+    /*border: 1px solid #000;*/
+}
+
+ul, li, h1, h2 {
+    /*Блочные свойства и обнуление отступов браузеров - делать по умолчанию для любой верстки*/
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /*Убрать маркеры (точки) со списков в меню*/
+    list-style-type: none;
+}
+h1 {
+    font-size:45px ;
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+    }
+
+h2{
+    font-size:20px ;
+    font-weight: 350;
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+}
+.btn {
+    /*  Размеры кнопки*/
+    width: 300px;
+    height: 54px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border: 1px solid #000000;
+
+    /*Закругление формы кнопки*/
+    border-radius: 500px;
+    /*Расстояние от текста до границы*/
+    padding:14px 0;
+
+    /*Сделать текст в верхнем регистре, цвет и стиль*/
+    /*text-transform: uppercase;*/
+    color: #757575;
+    font-weight:400;
+    font-size:15px;
+    line-height:22px;
+
+    /*выравнивание текста и его размера*/
+    text-align: center;
+
+    /*Задаем свойство блоков ссылкам кнопкам*/
+    display: block;
+
+    /* Оттолкнем нижние кнопки от верхних*/
+    margin-bottom: 25px;
+
+    /* Фон кнопки*/
+    background: #FCFDFC;
+           }
+/*Активация при наведении на кнопки*/
+/*Правильно сделать btn_active*/
+.btn:hover {
+    /*Красим фон*/
+    background:#757575;
+    /*  Делаем прозрачность*/
+    opacity: 0.7;
+    /*  перекрашиваем шрифт что бы был виден*/
+    color: #FFF;
+    /*  Делаем тень*/
+    /*box-shadow:#757575 ;*/
+}
+
+.btn1 {
+    /*  Размеры кнопки*/
+    width: 300px;
+    height: 70px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border: 1px solid #FF3300;
+
+    /*Закругление формы кнопки*/
+    border-radius: 500px;
+    /*Расстояние от текста до границы*/
+    padding:14px 0;
+
+    /*Сделать текст в верхнем регистре, цвет и стиль*/
+    /*text-transform: uppercase;*/
+    color: #FF3300;
+    font-weight:400;
+    font-size:15px;
+    line-height:22px;
+
+    /*выравнивание текста и его размера*/
+    text-align: center;
+
+    /*Задаем свойство блоков ссылкам кнопкам*/
+    display: block;
+
+    /* Оттолкнем нижние кнопки от верхних*/
+    margin-top: 40px;
+
+    /* Фон кнопки*/
+    background: #FCFDFC;
+}
+/*Активация при наведении на кнопки*/
+/*Правильно сделать btn_active*/
+.btn1:hover {
+    /*Красим фон*/
+    background:#FF3300;
+    /*  Делаем прозрачность*/
+    opacity: 0.9;
+    /*  перекрашиваем шрифт что бы был виден*/
+    color: #FFF;
+    /*  Делаем тень*/
+    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+}
+.buttons {
+    /*Свойства для родителя блочных элементов для выравнивания*/
+    display: flex;
+
+
+    /*Свойство по раздвижению кнопок*/
+    /*https://developer.mozilla.org/ru/docs/Web/CSS/justify-content*/
+
+    /*  Ширина зоны с кнопками*/
+    with: 642px;
+
+    /*  Растянуть контент по краям*/
+    Justify-Content: center;
+
+    /* Отступ заголовка до кнопок*/
+    margin-top: 40px;
+    }
+.buttons1 {
+    /*Свойства для родителя блочных элементов для выравнивания*/
+    display: flex;
+
+    /*Свойство по раздвижению кнопок*/
+    /*https://developer.mozilla.org/ru/docs/Web/CSS/justify-content*/
+
+    /*  Ширина зоны с кнопками*/
+    with: 642px;
+
+    /*  Растянуть контент по краям*/
+    Justify-Content: center;
+}
+/*расстояние между блоками кнопок*/
+.one{
+margin-right: 40px;
+}
+
+/*меню*/
+.menu{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+/*Стилизуем меню по БЭМ*/
+a{
+    /*Убрать стиль ссылок*/
+    text-decoration: none;
+    /*Цвет текста ссылок*/
+    color: #000;
+}
+.nav, .menu{
+    display: flex;
+    /*  Горизональное выравнивание по центру*/
+    align-items: center;
+}
+/*Блок*/
+.menu{
+    /*  Растянуть блок*/
+    width: 100%;
+    /*растягиваем в разные стороны*/
+    justify-content: space-between;
+    margin-right: 900px;
+}
+/*Делаем расстояние от логотипа в право*/
+img {
+    margin-right: 35px;
+}
+
+.background{
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    left: 307px;
+    top: 104px;
+}
+.background1{
+
+    position: absolute;
+    width: 152px;
+    height: 139px;
+    left: 1029px;
+    top: 104px;
+}
+
+.nav{
+    margin-bottom: 29px;
+    margin-top: 18px;
+    margin-left: 135px;
+
+}
+
+/*Активация при наведении на ссылку*/
+/*hover - при наведении мышки*/
+.menu__item_active:hover {
+    /*появляется подчеркивание*/
+    border-bottom: 2px solid #2266DA;
+    /* и перекрашивается цвет*/
+    color: #2266DA;
+}
+
+
+
