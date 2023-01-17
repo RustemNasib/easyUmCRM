@@ -1,5 +1,10 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,14 +72,14 @@
             <a href="/studentModifying" class="btn">Модифицировать выбранного студента</a>
         </div>
         <div>
-            <a href="#" class="btn">Создать студента </a>
+            <a href="/studentCreating" class="btn">Создать студента </a>
             <a href="#" class="btn">Удалить студента</a>
         </div>
     </div>
 </header>
 
 <section id="section" class="section">
-    <div  class="container">
+    <div class="container">
         <h2>Список студентов</h2>
 
         <!-- Таблица-->
@@ -92,56 +97,26 @@
                 <th class="td">Дата поступления</th>
             </tr>
             </thead>
+
             <!--tbody - определяет тело таблицы-->
             <tbody>
+            <c:forEach items="${allActiveStudents}" var="student">
+
+
             <!--  tr - создание строки таблицы-->
             <tr>
                 <!--  td- ячейка таблицы-->
                 <!--  chekbox - кубик с возможностью ставить галочку-->
-                <td
-                        class="td-ch"><input type="checkbox" class="check__item">
+                <td class="td-ch">
+                    <input type="checkbox" class="check__item">
                 </td>
-                <td class="td">Сидоров</td>
-                <td class="td">Сидор</td>
-                <td class="td">КТ-21</td>
-                <td class="td">1/09/2021</td>
+                <td class="td">${student.surname}</td>
+                <td class="td">${student.name}</td>
+                <td class="td">${student.group}</td>
+                <td class="td">${student.date}</td>
+
             </tr>
-            <tr>
-                <td
-                        class="td-ch"><input type="checkbox" class="check__item">
-                </td>
-                <td class="td">Петров</td>
-                <td class="td">Петр</td>
-                <td class="td">КТ-21</td>
-                <td class="td">1/09/2021</td>
-            </tr>
-            <tr>
-                <td
-                        class="td-ch"><input type="checkbox" class="check__item">
-                </td>
-                <td class="td">Иванов</td>
-                <td class="td">Иван</td>
-                <td class="td">КТ-21</td>
-                <td class="td">1/09/2021</td>
-            </tr>
-            <tr>
-                <td
-                        class="td-ch"><input type="checkbox" class="check__item">
-                </td>
-                <td class="td">Макаревич</td>
-                <td class="td">Андрей</td>
-                <td class="td">КТ-21</td>
-                <td class="td">1/09/2021</td>
-            </tr>
-            <tr>
-                <td
-                        class="td-ch"><input type="checkbox" class="check__item">
-                </td>
-                <td class="td">Бельгиец</td>
-                <td class="td">Василий</td>
-                <td class="td">КТ-21</td>
-                <td class="td">1/09/2021</td>
-            </tr>
+            </c:forEach>
 
             </tbody>
         </table>

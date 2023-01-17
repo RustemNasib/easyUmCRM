@@ -53,8 +53,8 @@ public class Student {
         this.group = group;
     }
 
-    public Date getDate(Date date) {
-        return this.date;
+    public Date getDate() {
+        return date;
     }
 
     public void setDate(Date date) {

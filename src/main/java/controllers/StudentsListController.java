@@ -15,15 +15,17 @@ import java.util.List;
 public class StudentsListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.getWriter().println("Hello");
-        req.getRequestDispatcher("WEB-INF/studentsList.jsp").forward(req, resp);
+
         //Создать объект типа dbServices
         DBServices dbServices = new DBServices();
 
-        //Вызвать метод getAllActiveStudents
+        //Вызвать метод getAllActiveStudents, что бы достать всех активных студентов из SQL
         List<Student> students = dbServices.getAllActiveStudents();
 
         //Дополняем полученными данными из SQL request(запрос)
         req.setAttribute("allActiveStudents", students);
+
+        //        resp.getWriter().println("Hello");
+        req.getRequestDispatcher("WEB-INF/studentsList.jsp").forward(req, resp);
     }
 }

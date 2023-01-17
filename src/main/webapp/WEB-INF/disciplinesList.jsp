@@ -107,8 +107,8 @@
       <!-- Делаем кнопки -->
       <div class="buttons">
         <div style="float: right;">
-          <a href="#" class="btn">Создать дисциплину</a>
-          <a href="#" class="btn">Модифицировать выбранную дисциплину</a>
+          <a href="/disciplineCreating" class="btn">Создать дисциплину</a>
+          <a href="/disciplinesModifying" class="btn">Модифицировать выбранную дисциплину</a>
           <a href="#" class="btn">Удалить выбранную дисциплину </a>
         </div>
       </div>

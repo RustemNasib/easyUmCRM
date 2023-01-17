@@ -1,6 +1,5 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
   <meta property="og:image" content="https://it.easyum.ru/wp-content/uploads/2018/11/home_top_img.png">
   <meta property="og:site_name" content="EasyUm CRM">
 
-  <title>StudentModifying</title>
+  <title>DisciplineModifying</title>
 
   <!-- подключение шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,9 +30,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Подключаем css -->
-  <link rel="stylesheet" href="../resources/css/StudentModifying2.css">
+  <link rel="stylesheet" href="../resources/css/DisciplineModifying8.css">
 </head>
-
 <body>
 <div class="container">
   <nav class="nav">
@@ -47,7 +45,7 @@
         <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
       </li>
       <li>
-        <a href="studentsList.jsp" class="menu__item menu__item_active">Назад </a>
+        <a href="/disciplinesList" class="menu__item menu__item_active">Назад </a>
       </li>
     </ul>
     <ul class="menu1">
@@ -62,31 +60,20 @@
   </h1>
   <!--    Печатаем строку над таблицей-->
   <h2 class="line">
-    Для модификации, введите новые значения и нажмите кнопку "Применить"
+    Для того, чтобы создать модифицировать дисциплину, введите новое значение поля и нажмите кнопку "Применить"
   </h2>
 </div>
-
 <img src="../resources/images/square_pattern%201.png" class="background">
 <img src="../resources/images/square_blur%201.png" class="background1">
 
-
 <!-- Делаем кнопки -->
 <div class="container buttons">
-  <div class="one">
-    <a href="#" class="btn">Сидоров </a>
-    <a href="#" class="btn">Сидор</a>
-  </div>
-  <div>
-    <a href="#" class="btn">КТ-21 </a>
-    <a href="#" class="btn">1/09/2021</a>
-  </div>
+  <a href="#" class="btn b1">Политология</a>
 </div>
 
 <div class="container buttons1">
-  <a href="#" class="btn1">ПРИМЕНИТЬ</a>
+  <a href="#" class="btn b2">ПРИМЕНИТЬ</a>
 
 </div>
 
 </body>
-
-</html>

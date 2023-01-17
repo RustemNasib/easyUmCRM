@@ -1,6 +1,5 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
   <meta property="og:image" content="https://it.easyum.ru/wp-content/uploads/2018/11/home_top_img.png">
   <meta property="og:site_name" content="EasyUm CRM">
 
-  <title>StudentModifying</title>
+  <title>TermsModifying</title>
 
   <!-- подключение шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +30,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Подключаем css -->
-  <link rel="stylesheet" href="../resources/css/StudentModifying2.css">
+  <link rel="stylesheet" href="../resources/css/TermsModifying11.css">
 </head>
 
-<body>
 <div class="container">
   <nav class="nav">
     <img src="../resources/images/logo.png" alt="EasyUm">
@@ -44,15 +42,15 @@
       <li>
         <!-- Превращаем в ссылку -->
         <!-- # - указывается ссылка для перехода-->
-        <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
+        <a href="/index.jsp" class="menu__item menu__item_active a">На главную </a>
       </li>
       <li>
-        <a href="studentsList.jsp" class="menu__item menu__item_active">Назад </a>
+        <a href="/termsList" class="menu__item menu__item_active b">Назад </a>
       </li>
     </ul>
     <ul class="menu1">
       <li>  <!-- Делаем ссылку -->
-        <a href="#" class="menu__item menu__item_active">Logout </a>
+        <a href="#" class="menu__item menu__item_active c">Logout </a>
       </li>
     </ul>
   </nav>
@@ -62,31 +60,48 @@
   </h1>
   <!--    Печатаем строку над таблицей-->
   <h2 class="line">
-    Для модификации, введите новые значения и нажмите кнопку "Применить"
+    Для модификации семестра отредактируйте данные и нажмите кнопу "Применить"
   </h2>
 </div>
-
 <img src="../resources/images/square_pattern%201.png" class="background">
 <img src="../resources/images/square_blur%201.png" class="background1">
 
-
-<!-- Делаем кнопки -->
-<div class="container buttons">
-  <div class="one">
-    <a href="#" class="btn">Сидоров </a>
-    <a href="#" class="btn">Сидор</a>
-  </div>
-  <div>
-    <a href="#" class="btn">КТ-21 </a>
-    <a href="#" class="btn">1/09/2021</a>
-  </div>
+<div class="container">
+  <ul class="bot">
+    <li class="li1">
+      <a>Длительность (в неделях)</a>
+    </li>
+    <li>
+      <a class="b1" href="#">18</a>
+    </li>
+  </ul>
 </div>
 
-<div class="container buttons1">
-  <a href="#" class="btn1">ПРИМЕНИТЬ</a>
+<div class="container">
 
+  <ul class="bot">
+    <li class="li2">
+      <a>Дисциплины в семестре</a>
+    </li>
+
+    <body multiple>
+    <div  class="li3 text">
+      <a href="#"><p>Информатика</p></a>
+      <a href="#"><p>Политология</p></a>
+      <a href="#"><p>Социология</p></a>
+      <a href="#"><p>Высшая Математика</p></a>
+      <a href="#"><p>Теория Алгоримизации</p></a>
+      <a href="#"><p>Теория Игр</p></a>
+      <a href="#"><p>Булева Алгебра</p></a>
+      <a href="#"><p>Системный анализ</p></a>
+    </div>
+    </body>
+  </ul>
+
+
+  <div class="li5">
+    <a href="#" class="b2">ПРИМЕНИТЬ</a>
+  </div>
 </div>
-
-</body>
 
 </html>

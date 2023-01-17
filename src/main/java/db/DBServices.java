@@ -82,6 +82,7 @@ public class DBServices implements IDBServices {
         //Создаем коллекцию
         List<Student> students = new ArrayList<>();
 
+        //Подключаемся к SQL
         // оборачиваем в try catсh
         try {
             //Подключаем драйвер для MySQL
@@ -94,12 +95,12 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.student");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.student where status = '1'");
 
             //вывод ResultSet (значения из базы данных) на консоль
             //делаем цикл, что бы наполнить коллекцию List<Student> students = new ArrayList<>()
             while (rs.next()) {
-                //Создали (подготовили) пустой объект типа дисциплина
+                //Создали (подготовили) пустой объект типа студент
                 Student student = new Student();
 
                 //Достали значение колонки id из базы данных SQL

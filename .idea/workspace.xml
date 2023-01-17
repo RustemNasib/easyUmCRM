@@ -9,7 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes 0123" />
+    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ternsModifying.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentsListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" afterDir="false" />
+    </list>
+    <list id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="RustemNasib &lt;rustem_n@list.ru&gt;" />
+      </list>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -58,27 +84,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/уроки/33 Алекс/верстка/Верстка 33-34 project/Project/HTML_05/StudentModifying2.html&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/JAVA/уроки/33 Алекс/верстка/Верстка 33-34 project/Project/HTML_05/TermsModifying11.html",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nasib\IdeaProjects\easyUmCRM\src\main\webapp\resources\css" />
@@ -92,7 +118,7 @@
       <deployment>
         <artifact name="easyUmCRM:war">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/easyUmCRM_war" />
           </settings>
         </artifact>
       </deployment>
@@ -179,6 +205,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="" />
+      <changelist id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
       <created>1671978428931</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -210,7 +237,16 @@
       <workItem from="1672823291105" duration="9193000" />
       <workItem from="1673426248120" duration="623000" />
       <workItem from="1673454201702" duration="2821000" />
-      <workItem from="1673511368323" duration="351000" />
+      <workItem from="1673511368323" duration="1810000" />
+      <workItem from="1673772520597" duration="5113000" />
+      <workItem from="1673850691316" duration="12921000" />
+      <workItem from="1673936551477" duration="1375000" />
+      <workItem from="1673939283246" duration="331000" />
+      <workItem from="1673939627323" duration="167000" />
+      <workItem from="1673939808446" duration="2027000" />
+      <workItem from="1673942015011" duration="1545000" />
+      <workItem from="1673943663942" duration="3891000" />
+      <workItem from="1673948618419" duration="3132000" />
     </task>
     <task id="LOCAL-00001" summary="changes 0123">
       <created>1673511702593</created>
@@ -219,11 +255,36 @@
       <option name="project" value="LOCAL" />
       <updated>1673511702593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes 0123">
+      <created>1673511888809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673511888809</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changes 0123">
+      <created>1673511897088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673511897088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

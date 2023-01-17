@@ -117,8 +117,8 @@
             <!-- Делаем кнопки -->
             <div class="buttons">
                 <div style="float: right;">
-                    <a href="#" class="btn">Создать семестр...</a>
-                    <a href="#" class="btn">Модифицировать текущий семестр...</a>
+                    <a href="/termsCreating" class="btn">Создать семестр...</a>
+                    <a href="/termsModifying" class="btn">Модифицировать текущий семестр...</a>
                     <a href="#" class="btn">Удалить текущий семестр...</a>
                 </div>
             </div>
