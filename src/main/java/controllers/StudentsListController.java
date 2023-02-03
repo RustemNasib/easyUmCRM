@@ -25,7 +25,7 @@ public class StudentsListController extends HttpServlet {
         //Дополняем полученными данными из SQL request(запрос)
         req.setAttribute("allActiveStudents", students);
 
-        //        resp.getWriter().println("Hello");
+        //resp.getWriter().println("Hello");
         req.getRequestDispatcher("WEB-INF/studentsList.jsp").forward(req, resp);
     }
 }

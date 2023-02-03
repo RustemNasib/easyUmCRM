@@ -1,5 +1,6 @@
 package db;
 
+import constants.Constants;
 import entity.*;
 
 import java.sql.Connection;
@@ -23,8 +24,8 @@ public class DBServices implements IDBServices {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Указываем путь к схеме базы данных, логин и пароль
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm_easyum_33", "root", "bu7za7bekA+");
-
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm_easyum_33", "root", "bu7za7bekA+");
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
@@ -55,6 +56,23 @@ public class DBServices implements IDBServices {
     //Создать дисциплину
     @Override
     public void createDiscipline(String discipline) {
+        //Подключаемся к SQL
+        try {
+            //Подключаем драйвер для MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            //Указываем путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+
+            //Statement (выбираем вариант подключения к базе данных sql)
+            //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
+            Statement stmt = conn.createStatement();
+            //указываем в качестве результата путь, откуда брать инфу
+            stmt.execute("INSERT INTO `crm_easyum_33`.`discipline` (`discipline`, `status`) VALUES ('"+discipline+"');\n");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //Получить дисциплину по id
@@ -89,7 +107,7 @@ public class DBServices implements IDBServices {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Указываем путь к схеме базы данных, логин и пароль
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm_easyum_33", "root", "bu7za7bekA+");
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
 
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
@@ -130,8 +148,26 @@ public class DBServices implements IDBServices {
     //Создать студента
     @Override
     public void createStudent(String surname, String name, String group, String date) {
+        //Подключаемся к SQL
+        try {
+            //Подключаем драйвер для MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            //Указываем путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+
+            //Statement (выбираем вариант подключения к базе данных sql)
+            //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
+            Statement stmt = conn.createStatement();
+            //указываем в качестве результата путь, откуда брать инфу
+            stmt.execute("INSERT INTO `crm_easyum_33`.`student` (`surname`, `name`, `group`, `date`) VALUES ('"+surname+"', '"+name+"', '"+group+"', '"+date+"');\n");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
+
 
     //Получить студента по id
     @Override
@@ -163,7 +199,7 @@ public class DBServices implements IDBServices {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Указываем путь к схеме базы данных, логин и пароль
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crm_easyum_33", "root", "bu7za7bekA+");
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
 
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
@@ -204,6 +240,23 @@ public class DBServices implements IDBServices {
     //Создать семестр
     @Override
     public void createTerm(String duration, String idsDisciplines) {
+        //Подключаемся к SQL
+        try {
+            //Подключаем драйвер для MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            //Указываем путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+
+            //Statement (выбираем вариант подключения к базе данных sql)
+            //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
+            Statement stmt = conn.createStatement();
+            //указываем в качестве результата путь, откуда брать инфу
+            stmt.execute("INSERT INTO `crm_easyum_33`.`term` (`term`, `duration`, `status`) VALUES ('"+duration+"');\n");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //Получить семестр по id

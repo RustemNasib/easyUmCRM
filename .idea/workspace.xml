@@ -9,26 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ternsModifying.jsp" afterDir="false" />
+    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes 0123">
+      <change afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentsListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentCreating3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentCreating3.css" afterDir="false" />
     </list>
     <list id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -84,35 +78,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JAVA/уроки/33 Алекс/верстка/Верстка 33-34 project/Project/HTML_05/TermsModifying11.html",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nasib/IdeaProjects/easyUmCRM&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nasib\IdeaProjects\easyUmCRM\src\main\webapp\resources\css" />
       <recent name="C:\Users\nasib\IdeaProjects\easyUmCRM\src\main\webapp\resourses\images" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.84" ALTERNATIVE_JRE_ENABLED="false">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
+    <configuration name="studentsList.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/easyUmCRM_war/WEB-INF/studentsList.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -200,6 +200,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.studentsList.jsp" />
+      <item itemvalue="Tomcat Server.Tomcat" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.studentsList.jsp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -246,7 +255,28 @@
       <workItem from="1673939808446" duration="2027000" />
       <workItem from="1673942015011" duration="1545000" />
       <workItem from="1673943663942" duration="3891000" />
-      <workItem from="1673948618419" duration="3132000" />
+      <workItem from="1673948618419" duration="4034000" />
+      <workItem from="1673953596121" duration="3471000" />
+      <workItem from="1673965033465" duration="7116000" />
+      <workItem from="1674023775773" duration="17007000" />
+      <workItem from="1674059826043" duration="1800000" />
+      <workItem from="1674068682409" duration="1093000" />
+      <workItem from="1674113236072" duration="7354000" />
+      <workItem from="1674224795239" duration="669000" />
+      <workItem from="1674286802033" duration="2662000" />
+      <workItem from="1674289491233" duration="3410000" />
+      <workItem from="1674372888613" duration="1128000" />
+      <workItem from="1674374435234" duration="171000" />
+      <workItem from="1674374616830" duration="43000" />
+      <workItem from="1674374670526" duration="83000" />
+      <workItem from="1674374769457" duration="798000" />
+      <workItem from="1674375579251" duration="244000" />
+      <workItem from="1674375835537" duration="59000" />
+      <workItem from="1674375906043" duration="138000" />
+      <workItem from="1674471498581" duration="120000" />
+      <workItem from="1674666255745" duration="3693000" />
+      <workItem from="1675415009273" duration="434000" />
+      <workItem from="1675415454710" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="changes 0123">
       <created>1673511702593</created>
@@ -269,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673511897088</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes 0123">
+      <created>1673951784143</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673951784143</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -77,13 +77,6 @@
 
     </div>
 </header>
-<section id="section" class="section">
 
-</section>
-<footer id="footer" class="footer">
-    <div class="container">
-
-    </div>
-</footer>
 </body>
 </html>

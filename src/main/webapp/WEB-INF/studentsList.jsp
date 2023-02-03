@@ -1,12 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,8 +48,6 @@
             <!-- Пункты меню -->
             <ul class="menu">
                 <li>
-                    <!-- Превращаем в ссылку -->
-                    <!-- # - указывается ссылка для перехода-->
                     <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
                 </li>
                 <li>  <!-- Делаем ссылку -->
@@ -69,11 +66,11 @@
     <div class="container buttons">
         <div>
             <a href="/studentProgress" class="btn">Просмотреть успеваемость выбранных студентов </a>
-            <a href="/studentModifying" class="btn">Модифицировать выбранного студента</a>
+            <a href="/studentModifying" class="btn">Модифицировать выбранного студента...</a>
         </div>
         <div>
-            <a href="/studentCreating" class="btn">Создать студента </a>
-            <a href="#" class="btn">Удалить студента</a>
+            <a href="/studentCreating" class="btn">Создать студента... </a>
+            <a href="#" class="btn">Удалить выбранных студентов</a>
         </div>
     </div>
 </header>
@@ -82,12 +79,10 @@
     <div class="container">
         <h2>Список студентов</h2>
 
-        <!-- Таблица-->
-        <table class="table">
+          <table class="table">
 
-            <!-- Заголовочная строка таблицы-->
             <thead>
-            <!--  tr - строка таблицы-->
+
             <tr>
                 <!--  th- заголовок ячейки таблицы-->
                 <th class="td"></th>
@@ -98,36 +93,24 @@
             </tr>
             </thead>
 
-            <!--tbody - определяет тело таблицы-->
             <tbody>
             <c:forEach items="${allActiveStudents}" var="student">
-
-
-            <!--  tr - создание строки таблицы-->
             <tr>
-                <!--  td- ячейка таблицы-->
-                <!--  chekbox - кубик с возможностью ставить галочку-->
                 <td class="td-ch">
                     <input type="checkbox" class="check__item">
                 </td>
                 <td class="td">${student.surname}</td>
                 <td class="td">${student.name}</td>
                 <td class="td">${student.group}</td>
-                <td class="td">${student.date}</td>
-
+                <%--Изменили формат вводимой даты на клиента--%>
+                <td class="td"><f:formatDate value="${student.date}" pattern="dd/mm/yyyy"/></td>
             </tr>
             </c:forEach>
-
             </tbody>
         </table>
     </div>
 </section>
 
-<footer id="footer" class="footer">
-    <div class="container">
-
-    </div>
-</footer>
 
 </body>
 </html>

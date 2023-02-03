@@ -1,7 +1,6 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +30,19 @@
 
     <!-- Подключаем css -->
     <link rel="stylesheet" href="../resources/css/StudentCreating3.css">
+
+<%--    Подключаем Java Script --%>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                showOtherMonths: true,
+                selectOtherMonths: true
+            });
+        } );
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -45,7 +57,7 @@
                 <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
             </li>
             <li>
-                <a href="studentsList.jsp" class="menu__item menu__item_active">Назад </a>
+                <a href="/studentsList" class="menu__item menu__item_active">Назад </a>
             </li>
         </ul>
         <ul class="menu1">
@@ -67,20 +79,28 @@
 <img src="../resources/images/square_blur%201.png" class="background1">
 <!-- Делаем кнопки -->
 <div class="container buttons">
-    <div class="one">
-        <a href="#" class="btn">Фамилия</a>
-        <a href="#" class="btn">Имя</a>
-    </div>
-    <div>
-        <a href="#" class="btn">Группа</a>
-        <a href="#" class="btn">Дата пoступления</a>
-    </div>
+
+    <form action="studentCreating" method="post">
+        <div class="container buttons one">
+            <input type="text" class="btn" placeholder="Фамилия" name="surname">
+            <input type="text" class="btn" placeholder="Имя" name="name">
+        </div>
+        <div class="container buttons one">
+            <input type="text" class="btn" placeholder="Группа" name="group">
+            <input type="date" class="btn" placeholder="Дата поступления" name="date" id="datepicker">
+           <%-- Из за формата дат часто возникаю ошибки записи в базу данных.
+                       Существует несколько способов:
+                       1. type = "text" - самый плохой способ на клиенте получить дату от пользователя;
+                       2. type = "date" - нормальный способ, но если стандартный календарь удовлетворяет заказчика
+                       3. Подключить JS и использовать библиотеку JQuery--%>
+
+        </div>
+        <div class="container buttons1">
+            <input class="btn1" type="submit" value="Создать"/>
+        </div>
+    </form>
 </div>
 
-<div class="container buttons1">
-    <a href="#" class="btn1">СОЗДАТЬ</a>
-
-</div>
 
 </body>
 </html>
