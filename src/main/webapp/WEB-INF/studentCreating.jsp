@@ -29,19 +29,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Подключаем css -->
+    <!-- Подключаем css для js-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../resources/css/StudentCreating3.css">
 
-<%--    Подключаем Java Script --%>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#datepicker" ).datepicker({
-                showOtherMonths: true,
-                selectOtherMonths: true
-            });
-        } );
-    </script>
+
 
 </head>
 <body>
@@ -75,32 +67,49 @@
         Для создания студента заполните все поля и нажмите кнопку "Создать"
     </h2>
 </div>
+
 <img src="../resources/images/square_pattern%201.png" class="background">
 <img src="../resources/images/square_blur%201.png" class="background1">
-<!-- Делаем кнопки -->
-<div class="container buttons">
 
-    <form action="studentCreating" method="post">
-        <div class="container buttons one">
-            <input type="text" class="btn" placeholder="Фамилия" name="surname">
-            <input type="text" class="btn" placeholder="Имя" name="name">
+<!-- Делаем кнопки -->
+<div>
+    <form action="studentCreating" method="post" accept-charset="US-ASCII">
+<%--        accept-charset="US-ASCII" позволяет вводить данные при создании студента на русском языке--%>
+<%--        //Поля нового студента должны быть в теге form и +кнопка--%>
+        <div class="container buttons">
+            <input type="text" class="btn btn_active z" placeholder="Фамилия" name="surname">
+            <input type="text" class="btn btn_active" placeholder="Имя" name="name">
         </div>
-        <div class="container buttons one">
-            <input type="text" class="btn" placeholder="Группа" name="group">
-            <input type="date" class="btn" placeholder="Дата поступления" name="date" id="datepicker">
-           <%-- Из за формата дат часто возникаю ошибки записи в базу данных.
+        <div class="container buttons">
+            <input type="text" class="btn btn_active z" placeholder="Группа" name="group">
+            <input type="text" class="btn btn_active" placeholder="Дата поступления" name="date" id="datepicker" autocomplete="off">
+<%--          autocomplete="off" отключает создание автоматической подсказки при наведение на  поле "Дата"--%>
+           <%-- Из за формата дат часто возникают ошибки записи в базу данных.
                        Существует несколько способов:
                        1. type = "text" - самый плохой способ на клиенте получить дату от пользователя;
                        2. type = "date" - нормальный способ, но если стандартный календарь удовлетворяет заказчика
                        3. Подключить JS и использовать библиотеку JQuery--%>
-
         </div>
+
         <div class="container buttons1">
-            <input class="btn1" type="submit" value="Создать"/>
+<%--            кнопка на теге "а" не умеет оправлять данные из input--%>
+            <input type="submit" value="СОЗДАТЬ" class="btn1 btn1_active"/>
         </div>
     </form>
 </div>
 
 
 </body>
+<%--    Подключаем Java Script --%>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#datepicker" ).datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+    } );
+</script>
+
 </html>

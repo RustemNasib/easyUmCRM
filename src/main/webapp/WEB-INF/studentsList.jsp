@@ -97,7 +97,7 @@
             <c:forEach items="${allActiveStudents}" var="student">
             <tr>
                 <td class="td-ch">
-                    <input type="checkbox" class="check__item">
+                    <input type="checkbox" class="check__item" value="${student.id}" name="idStudent">
                 </td>
                 <td class="td">${student.surname}</td>
                 <td class="td">${student.name}</td>
@@ -113,4 +113,7 @@
 
 
 </body>
+<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
+<script src="../resources/js/functions.js"></script>
+
 </html>

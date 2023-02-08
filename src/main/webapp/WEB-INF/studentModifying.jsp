@@ -47,7 +47,7 @@
         <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
       </li>
       <li>
-        <a href="studentsList.jsp" class="menu__item menu__item_active">Назад </a>
+        <a href="/studentsList" class="menu__item menu__item_active">Назад </a>
       </li>
     </ul>
     <ul class="menu1">
