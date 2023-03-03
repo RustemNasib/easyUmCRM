@@ -1,5 +1,8 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -50,7 +53,14 @@
     </ul>
     <ul class="menu1">
       <li>  <!-- Делаем ссылку -->
-        <a href="#" class="menu__item menu__item_active c">Logout </a>
+        <c:choose>
+          <c:when test="${isLogin eq true}">
+            <a href="/logout" class="menu__item menu__item_active">Logout </a>
+          </c:when>
+          <c:otherwise>
+            <a href="/login" class="menu__item menu__item_active">Login </a>
+          </c:otherwise>
+        </c:choose>
       </li>
     </ul>
   </nav>
@@ -90,7 +100,7 @@
       <a href="#"><p>Политология</p></a>
       <a href="#"><p>Социология</p></a>
       <a href="#"><p>Высшая Математика</p></a>
-      <a href="#"><p>Теория Алгоримизации</p></a>
+      <a href="#"><p>Теория Алгоритмизации</p></a>
       <a href="#"><p>Теория Игр</p></a>
       <a href="#"><p>Булева Алгебра</p></a>
       <a href="#"><p>Системный анализ</p></a>
@@ -100,7 +110,8 @@
 
 
   <div class="li5">
-    <a href="#" class="b2">ПРИМЕНИТЬ</a>
+<%--    <a href="#" class="b2">ПРИМЕНИТЬ</a>--%>
+    <input type="submit"value="ПРИМЕНИТЬ" class="b2">
   </div>
 </div>
 

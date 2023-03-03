@@ -1,12 +1,16 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание страницы для поисковиков не более 160 символов">
-    <meta name="keywords" content="ключевые слова или фразы для поисковых машин и систем, пишутся через запяую">
+    <meta name="keywords" content="ключевые слова или фразы для поисковых машин и систем, пишутся через запятую">
 
     <!--Устанавливаем фавикон - это ярлык возле названия страницы-->
     <!-- favicon 16x16 32x32 64x64 формат png -->
@@ -51,7 +55,14 @@
         </ul>
         <ul class="menu1">
             <li>  <!-- Делаем ссылку -->
-                <a href="#" class="menu__item menu__item_active c">Logout </a>
+                <c:choose>
+                    <c:when test="${isLogin eq true}">
+                        <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="/login" class="menu__item menu__item_active">Login </a>
+                    </c:otherwise>
+                </c:choose>
             </li>
         </ul>
     </nav>
@@ -91,12 +102,21 @@
             <a href="#"><p>Политология</p></a>
             <a href="#"><p>Социология</p></a>
             <a href="#"><p>Высшая Математика</p></a>
-            <a href="#"><p>Теория Алгоримизации</p></a>
+            <a href="#"><p>Теория Алгоритмизации</p></a>
             <a href="#"><p>Теория Игр</p></a>
             <a href="#"><p>Булева Алгебра</p></a>
             <a href="#"><p>Системный анализ</p></a>
         </div>
 
+<%--        <tbody class="tbody">--%>
+<%--        <div  class="li3 text">--%>
+<%--        <c:forEach items="${disciplines}" var="d">--%>
+<%--            <tr>--%>
+<%--                <td class="td">${d.discipline}</td>--%>
+<%--            </tr>--%>
+<%--        </c:forEach>--%>
+<%--        </div>--%>
+<%--        </tbody>--%>
 
 
     </ul>

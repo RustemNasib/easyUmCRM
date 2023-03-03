@@ -1,5 +1,8 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="ru">
 
@@ -11,7 +14,7 @@
 
     <!--Устанавливаем фавикон - это ярлык возле названия страницы-->
     <!-- favicon 16x16 32x32 64x64 формат png -->
-    <link rel="icon" type='image/png' href="img/favicon_easyUm.png">
+    <link rel="icon" type='image/png' href="../resources/images/favicon_easyUm.png">
 
     <!-- OG метки это (Open Graf) миниатюра сайта для соц сетей и мессенджеров,
     пример: https://auto.ru/cars/used/sale/ram/1500/1117314846-ddc10bf3/?from=searchline-->
@@ -49,7 +52,14 @@
                         <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
                     </li>
                     <li class="li2">  <!-- Делаем ссылку -->
-                        <a href="#" class="menu__item menu__item_active">Logout </a>
+                        <c:choose>
+                            <c:when test="${isLogin eq true}">
+                                <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="/login" class="menu__item menu__item_active">Login </a>
+                            </c:otherwise>
+                        </c:choose>
                     </li>
                 </ul>
             </nav>
@@ -61,27 +71,38 @@
             <img src="../resources/images/square_blur%201.png" class="background1">
 
             <!-- Делаем блок -->
-            <div class="but">
-                <ul class="bot">
-                    <a href="#" class="li3">Выбрать семестр</a>
+            <div class="but mt10 test">
+                <form action="termsList" method="get">
+                    <div class="bot df jcsb">
+                        <div>
+                            <select name="idSelectedTerm" class="field-select select">
+                                <c:forEach items="${terms}" var="t">
+                                    <c:choose>
+                                        <c:when test="${t.id eq selectedTerm.id}">
+                                            <option selected value="${t.id}">${t.term}</option>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <option value="${t.id}">${t.term}</option>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
 
-                    <li class="li4">
-                        <a class="txt"><input type="checkbox" class="check__item">Семестр 1</a>
-                    </li>
+                            </select>
+                            <p class="li6">Длительность семестра: ${selectedTerm.duration}</p>
+                        </div>
+                        <%--                    <a href="#" class="li3">Выбрать семестр</a>--%>
+                        <%--                    <a href="#" class="text">ПРИМЕНИТЬ</a>--%>
+                        <input type="submit" value="Выбрать семестр" class="btn buttons term text">
 
-                    <a href="#" class="text">ПРИМЕНИТЬ</a>
+                    </div>
+                </form>
 
-                </ul>
-                <ul>
-                    <li class="li6">Длительность семестра: 24 недели</li>
-                </ul>
             </div>
 
             <!--    Печатаем строку над таблицей-->
             <h2 class="line1">
                 Список дисциплин семестра
             </h2>
-
 
             <!--блок с таблицей-->
             <table class="table" style="float: left;">
@@ -96,34 +117,48 @@
                 <!--tbody - определяет тело таблицы-->
                 <tbody class="tbody">
                 <!--  tr - создание строки таблицы-->
-                <tr>
-                    <td class="td">Высшая математика</td>
-                </tr>
-                <tr>
-                    <td class="td">История Науки и Техники</td>
-                </tr>
-                <tr>
-                    <td class="td">Политология</td>
-                </tr>
-                <tr>
-                    <td class="td">Информатика</td>
-                </tr>
-                <tr>
-                    <td class="td">Теория Алгоритмизации</td>
-                </tr>
+                <c:forEach items="${disciplines}" var="d">
+                    <tr>
+                        <td class="td">${d.discipline}</td>
+                    </tr>
+                </c:forEach>
+
                 </tbody>
             </table>
 
             <!-- Делаем кнопки -->
             <div class="buttons">
                 <div style="float: right;">
-                    <a href="/termsCreating" class="btn">Создать семестр...</a>
-                    <a href="/termsModifying" class="btn">Модифицировать текущий семестр...</a>
-                    <a href="#" class="btn">Удалить текущий семестр...</a>
+                    <a href="/termsCreating" methods="get" class="btn">Создать семестр...</a>
+<%--                    <a href="/termsModifying" methods="get" class="btn">Модифицировать текущий семестр...</a>--%>
+<%--                    <input type="submit" value="Модифицировать текущий семестр..." class="btn" onclick="modifyTerms()">--%>
+                    <c:if test="${role eq 1}">
+                        <input type="submit" value="Модифицировать выбранного студента" class="btn" onclick="modifyTerms()">
+                        <%--        onclick="modifyStudent()" - атририбут функции, прописываемый в JS    --%>
+                    </c:if>
+
+                    <%--                    <a href="#" class="btn">Удалить текущий семестр...</a>--%>
+                    <c:if test="${role eq 1}">
+                        <input type="submit" value="Удалить текущий семестр" class="btn" onclick="deleteTerms()">
+                        <%--        onclick="deleteStudents()" - атририбут функции, прописываемый в JS    --%>
+                    </c:if>
                 </div>
             </div>
 
         </div>
     </header>
 </div>
+<%--Форма для удаления семестра--%>
+<form action="/termsDelete" method="post" id="formDelete">
+    <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
+</form>
+
+<%--Форма для модификации семестра--%>
+<form action="/termsModifying" method="get" id="formModify">
+    <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
+</form>
+
+<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
+<script src="../resources/js/functions.js"></script>
+
 </html>

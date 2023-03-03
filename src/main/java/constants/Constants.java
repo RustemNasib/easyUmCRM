@@ -10,6 +10,4 @@ public interface Constants {
 //    String URL_TO_DB = "jdbc:mysql://localhost:3306/crm_easyum_33";
 //    String LOGIN_TO_DB = "root_2";
 //    String PASSWORD_TO_DB = "nJb3lL%E*m7c";
-
-
 }

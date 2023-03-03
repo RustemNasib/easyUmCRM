@@ -79,7 +79,7 @@ body {
 /*	border: 1px solid #000;	*/
 }
 
-ul, li, h1, h2 {
+ul, li, h1, h2, h4 {
 	/*Блочные свойства и обнуление отступов браузеров,
 	 делать по умолчанию для любой верстке*/
 	display: block;
@@ -93,9 +93,106 @@ li {
 }
 
 h1 {
-	font-size: 40px;
-	font-weight: 700;
+	/*position: absolute;*/
+	width: 1071px;
+	height: 66px;
+	left: 184px;
+	top: 109px;
+
+	font-family: 'Circe';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 44px;
+	line-height: 66px;
+
+	color: #000000;
 	text-align: center;
+	margin-top: 29px;
+	margin-bottom: 40px;
+}
+h2{
+	width: 297px;
+	height: 32px;
+	left: 184px;
+	top: 215px;
+
+	font-family: 'Circe';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 32px;
+
+	color: #000000;
+}
+
+/*меню*/
+.menu{
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+/*Стилизуем меню по БЭМ*/
+a{
+	/*Убрать стиль ссылок*/
+	text-decoration: none;
+	/*Цвет текста ссылок*/
+	color: #000;
+}
+
+.nav, .menu{
+	display: flex;
+	/*  Горизональное выравнивание по центру*/
+	align-items: center;
+}
+
+/*Блок*/
+.menu{
+	/*  Растянуть блок*/
+	width: 100%;
+	/*растягиваем в разные стороны*/
+	justify-content: space-between;
+}
+
+/*Делаем расстояние от логотипа в право*/
+img {
+	margin-right: 33px;
+}
+.background{
+	position: absolute;
+	width: 118px;
+	height: 118px;
+	left: 324px;
+	top: 104px;
+}
+.background1{
+	position: absolute;
+	width: 152px;
+	height: 139px;
+	left: 1004px;
+	top: 108px;
+}
+
+.nav{
+	margin-bottom: 29px;
+	margin-top: 18px;
+}
+
+/*Активация при наведении на ссылку*/
+/*hover - при наведении мышки*/
+.menu__item_active:hover {
+	/*появляется подчеркивание*/
+	border-bottom: 2px solid #2266DA;
+	/* и перекрашивается цвет*/
+	color: #2266DA;
+}
+
+.text-center {
+
+	text-align: center;
+}
+
+.mt50 {
+	margin-top: 50px;
 }
 
 .btn {
@@ -138,6 +235,88 @@ h1 {
 	box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.2);
 }
 
+.btn-min {
+	width: 250px;
+	margin-right: 35px;
+	margin-left: 15px;
+}
+
+.field {
+	/*Размеры кнопки*/
+	width: 300px;
+	height: 54px;
+
+	/*Убрать подчеркивание ссылки*/
+	text-decoration: none;
+
+	/*Граница вокруг кнопки*/
+	border: 1px solid #000;
+	border-radius: 500px;
+
+	/*Расстояние от текста до гарницы*/
+	padding: 15px 25px;
+
+	/*Сделать текст в верхнем регистре и цвет и стиль*/
+	color: #757575;
+	font-weight: 400;
+	line-height: 22px;
+	font-size: 15px;
+
+	/*Задаем свойство блоков ссылкам (кнопкам)*/
+	display: block;
+
+	/*Фон кнопки*/
+	background: #FCFDFC;
+	opacity: 0.9;
+
+	/*Тень для кнопки*/
+	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+/*Убрать для select спец эффекты по умолчанию*/
+input:focus,
+select:focus, .form-control:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.field-select {
+	/*Размеры кнопки*/
+	width: 180px;
+	height: 54px;
+
+	/*Убрать подчеркивание ссылки*/
+	text-decoration: none;
+
+	/*Граница вокруг кнопки*/
+	border: 1px solid #2575FC;
+	border-radius: 10px;
+
+	/*Расстояние от текста до гарницы*/
+	padding: 5px 15px;
+
+	/*Сделать текст в верхнем регистре и цвет и стиль*/
+	color: #757575;
+	font-weight: 400;
+	line-height: 22px;
+	font-size: 15px;
+
+	/*Задаем свойство блоков ссылкам (кнопкам)*/
+	display: block;
+
+	/*Фон кнопки*/
+	background: #FCFDFC;
+	opacity: 0.9;
+
+	/*Тень для кнопки*/
+	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ml30 {
+	margin-left: 30px;
+}
 .buttons {
 	/*Свойства для родителя блочных элементов для выравнивания*/
 	display: flex;
@@ -148,9 +327,32 @@ h1 {
 
 	/*Растянуть контент по краям*/
 	justify-content: space-between;
+	
 
 	/*Отступ от заголовка до кнопок*/
 	margin-top: 40px;
+}
+
+.mt30 {
+	margin-top: 30px;
+}
+
+.mt15 {
+	margin-top: 15px;
+}
+
+
+
+.fields {
+	width: 642px;
+}
+
+.btn-center {
+	justify-content: center;
+}
+
+.w300 {
+	width: 300px;
 }
 
 /*Делаем таблицу*/
@@ -299,4 +501,32 @@ a, img, span - строчные элементы и они не стремять
 
 h2 {
 	margin-top: 15px;
+	color: #000;
+}
+
+.text {
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.df {
+	display: flex;
+	
+}
+
+.mr30 {
+	margin-right: 30px;
+}
+
+.jcsb {
+	justify-content: space-between;
+}
+
+.padding80 {
+	padding: 80px;
+}
+
+.b1, .b2 {
+	border: 1px solid #000;
+	
 }

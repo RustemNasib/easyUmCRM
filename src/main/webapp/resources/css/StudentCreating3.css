@@ -261,3 +261,7 @@ img {
     /* и перекрашивается цвет*/
     color: #2266DA;
 }
+.error-text{
+    color: #FF3300;
+    text-align: center;
+}

@@ -34,8 +34,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Подключаем css -->
     <link rel="stylesheet" href="../resources/css/StudentsList1.css">
+
 </head>
 
 <body>
@@ -50,27 +55,50 @@
                 <li>
                     <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
                 </li>
-                <li>  <!-- Делаем ссылку -->
-                    <a href="#" class="menu__item menu__item_active">Logout </a>
+                <li>
+                    <c:choose>
+                        <c:when test="${isLogin eq true}">
+                            <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="/login" class="menu__item menu__item_active">Login </a>
+                        </c:otherwise>
+                    </c:choose>
                 </li>
             </ul>
         </nav>
+
         <!--Печатаем название-->
         <h1>
             Система управления студентами и их успеваемостью
         </h1>
     </div>
+
     <img src="../resources/images/square_pattern%201.png" class="background">
     <img src="../resources/images/square_blur%201.png" class="background1">
+
     <!-- Делаем кнопки -->
     <div class="container buttons">
         <div>
             <a href="/studentProgress" class="btn">Просмотреть успеваемость выбранных студентов </a>
-            <a href="/studentModifying" class="btn">Модифицировать выбранного студента...</a>
+            <%--            <a href="/studentModifying" class="btn">Модифицировать выбранного студента...</a>--%>
+            <%--           настройка права доступа к кнопке --%>
+            <c:if test="${role eq 1}">
+                <input type="submit" value="Модифицировать выбранного студента" class="btn" onclick="modifyStudent()">
+                <%--        onclick="modifyStudent()" - атририбут функции, прописываемый в JS    --%>
+            </c:if>
         </div>
         <div>
-            <a href="/studentCreating" class="btn">Создать студента... </a>
-            <a href="#" class="btn">Удалить выбранных студентов</a>
+            <%--           настройка права доступа к кнопке --%>
+            <c:if test="${role eq 1}">
+                <a href="/studentCreating" class="btn">Создать студента... </a>
+                <%--            <a href="#" class="btn">Удалить выбранных студентов</a>--%>
+            </c:if>
+            <%--           настройка права доступа к кнопке --%>
+            <c:if test="${role eq 1}">
+                <input type="submit" value="Удалить выбранных студентов" class="btn" onclick="deleteStudents()">
+                <%--        onclick="deleteStudents()" - атририбут функции, прописываемый в JS    --%>
+            </c:if>
         </div>
     </div>
 </header>
@@ -79,7 +107,7 @@
     <div class="container">
         <h2>Список студентов</h2>
 
-          <table class="table">
+        <table class="table">
 
             <thead>
 
@@ -95,22 +123,32 @@
 
             <tbody>
             <c:forEach items="${allActiveStudents}" var="student">
-            <tr>
-                <td class="td-ch">
-                    <input type="checkbox" class="check__item" value="${student.id}" name="idStudent">
-                </td>
-                <td class="td">${student.surname}</td>
-                <td class="td">${student.name}</td>
-                <td class="td">${student.group}</td>
-                <%--Изменили формат вводимой даты на клиента--%>
-                <td class="td"><f:formatDate value="${student.date}" pattern="dd/mm/yyyy"/></td>
-            </tr>
+                <tr>
+                    <td class="td-ch">
+                        <input type="checkbox" class="check__item" value="${student.id}" name="idStudent">
+                    </td>
+                    <td class="td">${student.surname}</td>
+                    <td class="td">${student.name}</td>
+                    <td class="td">${student.group}</td>
+                        <%--Изменили формат вводимой даты на клиента--%>
+                    <td class="td"><f:formatDate value="${student.date}" pattern="dd/MM/yyyy"/></td>
+                </tr>
             </c:forEach>
             </tbody>
         </table>
     </div>
 </section>
 
+<%--Форма для удаления студентов--%>
+<%--/studentDelete urlPattern в контроллере--%>
+<form action="/disciplineDelete" method="post" id="formDelete">
+    <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
+</form>
+
+<%--Форма для модификации студента--%>
+<form action="/studentModifying" method="get" id="formModify">
+    <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
+</form>
 
 </body>
 <%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>

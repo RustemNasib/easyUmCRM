@@ -135,7 +135,7 @@ img {
     color: #2266DA;
 }
 
-/*Делем таблицу*/
+/*Делаем таблицу*/
 th, td{
     /*  Обводка ячеек*/
     border: 1px solid #2575FC;
@@ -171,6 +171,80 @@ tbody{
     /*  Отступы в ячейках*/
     padding: 37px 0 15px 15px; (верх право низ лево)
 font-size: 18px;
+}
+
+
+.field {
+    /*Размеры кнопки*/
+    width: 300px;
+    height: 54px;
+
+    /*Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки*/
+    border: 1px solid #000;
+    border-radius: 500px;
+
+    /*Расстояние от текста до гарницы*/
+    padding: 15px 25px;
+
+    /*Сделать текст в верхнем регистре и цвет и стиль*/
+    color: #757575;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 15px;
+
+    /*Задаем свойство блоков ссылкам (кнопкам)*/
+    display: block;
+
+    /*Фон кнопки*/
+    background: #FCFDFC;
+    opacity: 0.9;
+
+    /*Тень для кнопки*/
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+/*Убрать для select спец эффекты по умолчанию*/
+input:focus,
+select:focus, .form-control:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.field-select {
+    /*Размеры кнопки*/
+    width: 180px;
+    height: 54px;
+
+    /*Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки*/
+    border: 1px solid #2575FC;
+    border-radius: 10px;
+
+    /*Расстояние от текста до гарницы*/
+    padding: 5px 15px;
+
+    /*Сделать текст в верхнем регистре и цвет и стиль*/
+    color: #757575;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 15px;
+
+    /*Задаем свойство блоков ссылкам (кнопкам)*/
+    display: block;
+
+    /*Фон кнопки*/
+    background: #FCFDFC;
+    opacity: 0.9;
+
+    /*Тень для кнопки*/
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .btn {
@@ -247,18 +321,24 @@ font-size: 18px;
     box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
 }
 
+
+.mt30 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
 .li3{
     width: 151px;
     height: 29px;
     /*left: 729px;*/
     /*top: 413px;*/
+    position: center;
     font-family: 'Circe';
     font-style: normal;
     font-weight: 350;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 29px;
     color: #000000;
-    margin-right: 40px;
+    margin-right: 80px;
 }
 /*блок*/
 .li4 {
@@ -354,3 +434,30 @@ font-size: 18px;
     appearance: none;
     display: inline-flex;
 }
+.df {
+    display: flex;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.term {
+    /*  Размеры кнопки*/
+    width: 208px;
+    height: 44px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    border:1px solid #FF3300;
+
+    /*Закругление формы кнопки*/
+    border-radius:500px;
+
+
+}
+

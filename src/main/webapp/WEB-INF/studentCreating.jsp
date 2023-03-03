@@ -1,4 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -31,7 +36,7 @@
     <!-- Подключаем css -->
     <!-- Подключаем css для js-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../resources/css/StudentCreating3.css">
+    <link rel="stylesheet" href="../resources/css/StudentCreating3.css?v.2">
 
 
 
@@ -53,8 +58,15 @@
             </li>
         </ul>
         <ul class="menu1">
-            <li>  <!-- Делаем ссылку -->
-                <a href="#" class="menu__item menu__item_active">Logout </a>
+            <li>
+                <c:choose>
+                    <c:when test="${isLogin eq true}">
+                        <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="/login" class="menu__item menu__item_active">Login </a>
+                    </c:otherwise>
+                </c:choose>
             </li>
         </ul>
     </nav>
@@ -73,7 +85,7 @@
 
 <!-- Делаем кнопки -->
 <div>
-    <form action="studentCreating" method="post" accept-charset="US-ASCII">
+    <form action="studentCreating" method="post">
 <%--        accept-charset="US-ASCII" позволяет вводить данные при создании студента на русском языке--%>
 <%--        //Поля нового студента должны быть в теге form и +кнопка--%>
         <div class="container buttons">
@@ -96,6 +108,13 @@
             <input type="submit" value="СОЗДАТЬ" class="btn1 btn1_active"/>
         </div>
     </form>
+<%--    Вывести сообщение об ошибке незаполненных полей--%>
+<%--    <c:if test="${Error eq 1}">--%>
+<%--        <i style = "color: #FF3300">Поля заполнены не все!</i>--%>
+<%--    </c:if>--%>
+    <c:if test="${Error eq 1}">
+        <p class="error-text" style = "color: #FF3300">Поля заполнены не все!</p>
+    </c:if>
 </div>
 
 

@@ -40,7 +40,7 @@ public interface IDBServices {
     //Модифицировать студента
     void modifyStudent(String id, String newSurname, String newName, String newGroup, String newDate);
 
-    //Удалить студента
+    //Удалить по-одному студенту
     void deleteStudent(String id);
 
     //Удалить несколько студентов

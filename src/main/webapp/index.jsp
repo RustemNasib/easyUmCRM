@@ -1,5 +1,6 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="ru">
@@ -9,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание страницы для поисковиков не более 160 символов">
     <meta name="keywords" content="ключевые слова или фразы для поисковых машин и систем, пишутся через запяую">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!--Устанавливаем фавикон - это ярлык возле названия страницы-->
     <!-- favicon 16x16 32x32 64x64 формат png -->
@@ -33,6 +38,7 @@
 
     <!-- Подключаем css -->
     <link rel="stylesheet" href="resources/css/TitlePage5.css">
+
 </head>
 
 <body>
@@ -49,7 +55,14 @@
                     <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
                 </li>
                 <li class="li2">  <!-- Делаем ссылку -->
-                    <a href="#" class="menu__item menu__item_active">Logout </a>
+                    <c:choose>
+                        <c:when test="${isLogin eq true}">
+                            <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="/login" class="menu__item menu__item_active">Login </a>
+                        </c:otherwise>
+                    </c:choose>
                 </li>
             </ul>
         </nav>
@@ -59,7 +72,6 @@
         </h1>
         <img src="resources/images/square_pattern%201.png" class="background">
         <img src="resources/images/square_blur%201.png" class="background1">
-
 
         <div class="container buttons">
 

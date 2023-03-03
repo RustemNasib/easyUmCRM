@@ -1,7 +1,9 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,12 +47,19 @@
                 <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
             </li>
             <li>
-                <a href="/disciplinesList.jsp" class="menu__item menu__item_active">Назад </a>
+                <a href="/disciplinesList" class="menu__item menu__item_active">Назад </a>
             </li>
         </ul>
         <ul class="menu1">
             <li>  <!-- Делаем ссылку -->
-                <a href="#" class="menu__item menu__item_active">Logout </a>
+                <c:choose>
+                    <c:when test="${isLogin eq true}">
+                        <a href="/logout" class="menu__item menu__item_active">Logout </a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="/login" class="menu__item menu__item_active">Login </a>
+                    </c:otherwise>
+                </c:choose>
             </li>
         </ul>
     </nav>
@@ -67,13 +76,24 @@
 </div>
 
 <!-- Делаем кнопки -->
-<div class="container buttons">
-    <a href="#" class="btn b1">Название</a>
+<div>
+    <%--        //Поля новой дисциплины должны быть в теге form и +кнопка--%>
+    <form action="disciplineCreating" method="post">
+
+        <div class="container buttons">
+            <%--    <a href="#" class="btn b1">Название</a>--%>
+            <%--    кнопка на теге "а" не умеет оправлять данные из input--%>
+
+            <input type="text" class="btn b1" placeholder="Название" name="discipline">
+        </div>
+
+        <div class="container buttons1">
+            <%--    <a href="#" class="btn b2">СОЗДАТЬ</a>--%>
+            <%--    кнопка на теге "а" не умеет оправлять данные из input--%>
+            <input type="submit" value="СОЗДАТЬ" class="btn b2"/>
+        </div>
+    </form>
 </div>
-
-<div class="container buttons1">
-    <a href="#" class="btn b2">СОЗДАТЬ</a>
-
-</div>
-
 </body>
+
+</html>

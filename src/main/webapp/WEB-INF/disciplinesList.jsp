@@ -1,5 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="ru">
@@ -50,7 +52,14 @@
             <a href="/index.jsp" class="menu__item menu__item_active">На главную </a>
           </li>
           <li class="li2">  <!-- Делаем ссылку -->
-            <a href="#" class="menu__item menu__item_active">Logout </a>
+            <c:choose>
+              <c:when test="${isLogin eq true}">
+                <a href="/logout" class="menu__item menu__item_active">Logout </a>
+              </c:when>
+              <c:otherwise>
+                <a href="/login" class="menu__item menu__item_active">Login </a>
+              </c:otherwise>
+            </c:choose>
           </li>
         </ul>
       </nav>
@@ -64,8 +73,10 @@
       </h2>
       <img src="../resources/images/square_pattern%201.png" class="background">
       <img src="../resources/images/square_blur%201.png" class="background1">
+
       <!--блок с таблицей-->
       <table class="table" style="float: left;">
+
         <!-- Заголовочная строка таблицы-->
         <thead class="thead">
         <!--  tr - строка таблицы-->
@@ -75,45 +86,51 @@
           <th class="td">Наименование дисциплины</th>
         </tr>
         </thead>
+
         <!--tbody - определяет тело таблицы-->
         <tbody class="tbody">
-        <!--  tr - создание строки таблицы-->
-        <tr>
-          <td class="td-ch"><input type="checkbox" class="check__item">
-          </td>
-          <td class="td">Высшая математика</td>
-        </tr>
-        <tr>
-          <td class="td-ch"><input type="checkbox" class="check__item"></td>
-          <td class="td">История Науки и Техники</td>
-        </tr>
-        <tr>
-          <td class="td-ch"><input type="checkbox" class="check__item"></td>
-          <td class="td">Политология</td>
-        </tr>
-        <tr>
-          <td class="td-ch"><input type="checkbox" class="check__item">
-          </td>
-          <td class="td">Информатика</td>
-        </tr>
-        <tr>
-          <td class="td-ch"><input type="checkbox" class="check__item">
-          </td>
-          <td class="td">Теория Алгоритмизации</td>
-        </tr>
+<c:forEach items="${allActiveDisciplines}" var="discipline">
+  <tr>
+    <td class="td-ch">
+      <input type="checkbox" class="check__item" value="${discipline.id}" name="idDiscipline">
+    </td>
+    <td class="td">${discipline.discipline}</td>
+  </tr>
+</c:forEach>
         </tbody>
       </table>
 
       <!-- Делаем кнопки -->
       <div class="buttons">
-        <div style="float: right;">
+        <div style="float: right;" >
           <a href="/disciplineCreating" class="btn">Создать дисциплину</a>
-          <a href="/disciplinesModifying" class="btn">Модифицировать выбранную дисциплину</a>
-          <a href="#" class="btn">Удалить выбранную дисциплину </a>
+<%--          <a href="/disciplinesModifying" class="btn">Модифицировать выбранную дисциплину</a>--%>
+          <c:if test="${role eq 1}">
+            <input type="submit" value="Модифицировать выбранную дисциплину" class="btn" onclick="modifyDiscipline()">
+            <%--        onclick="modifyStudent()" - атрибут функции, прописываемый в JS    --%>
+          </c:if>
+<%--          <a href="#" class="btn">Удалить выбранную дисциплину </a>--%>
+          <%--           настройка права доступа к кнопке --%>
+          <c:if test="${role eq 1}">
+            <input type="submit" value="Удалить выбранную дисциплину" class="btn" onclick="deleteDiscipline()">
+            <%--        onclick="deleteStudents()" - атрибут функции, прописываемый в JS    --%>
+          </c:if>
         </div>
       </div>
-
     </div>
   </header>
 </div>
+<%--Форма для удаления дисциплин--%>
+<form action="/disciplineDelete" method="post" id="formDelete">
+  <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
+</form>
+
+<%--Форма для модификации дисциплин--%>
+<form action="/disciplinesModifying" method="get" id="formModify">
+  <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
+</form>
+
+</body>
+<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
+<script src="../resources/js/functions.js"></script>
 </html>

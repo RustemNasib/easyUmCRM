@@ -96,7 +96,7 @@ li {
 }
 
 h1 {
-  font-size:41px ;
+  font-size:40px ;
   font-weight: 700;
   text-align: center;
 }
@@ -278,16 +278,16 @@ margin-right: 33px;
   position: absolute;
   width: 118px;
   height: 108px;
-  left: 354px;
-  top: 104px;
+  left: 554px;
+  top: 154px;
 }
 
 .background1{
   position: absolute;
   width: 152px;
   height: 139px;
-  left: 1029px;
-  top: 104px;
+  left: 1129px;
+  top: 154px;
  }
 
 /*Блочные и строчные элементы

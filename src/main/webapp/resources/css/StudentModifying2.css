@@ -1,5 +1,5 @@
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Для body установить шрифт по умолчанию, его размер и цвет,
@@ -20,6 +20,7 @@ body {
     /*  Цвет фона*/
     background: #FCFDFC;
 }
+
 .container {
     width: 1440px;
     margin: 0 auto;
@@ -38,21 +39,23 @@ li {
     /*Убрать маркеры (точки) со списков в меню*/
     list-style-type: none;
 }
+
 h1 {
-    font-size:45px ;
+    font-size: 45px;
     font-weight: 800;
     text-align: center;
     color: #000000;
     margin-top: 40px;
-    }
+}
 
-h2{
-    font-size:20px ;
+h2 {
+    font-size: 20px;
     font-weight: 350;
     text-align: center;
     color: #000000;
     margin-top: 40px;
 }
+
 .btn {
     /*  Размеры кнопки*/
     width: 300px;
@@ -67,14 +70,14 @@ h2{
     /*Закругление формы кнопки*/
     border-radius: 500px;
     /*Расстояние от текста до границы*/
-    padding:14px 0;
+    padding: 14px 0;
 
     /*Сделать текст в верхнем регистре, цвет и стиль*/
     /*text-transform: uppercase;*/
     color: #757575;
-    font-weight:400;
-    font-size:15px;
-    line-height:22px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
 
     /*выравнивание текста и его размера*/
     text-align: center;
@@ -87,19 +90,20 @@ h2{
 
     /* Фон кнопки*/
     background: #FCFDFC;
-           }
+}
+
 /*Активация при наведении на кнопки*/
 /*Правильно сделать btn_active*/
-.btn:hover {
-    /*Красим фон*/
-    background:#757575;
-    /*  Делаем прозрачность*/
-    opacity: 0.7;
-    /*  перекрашиваем шрифт что бы был виден*/
-    color: #FFF;
-    /*  Делаем тень*/
-    /*box-shadow:#757575 ;*/
-}
+/* btn:hover {*/
+/*    !*Красим фон*!*/
+/*    background: #757575;*/
+/*    !*  Делаем прозрачность*!*/
+/*    opacity: 0.7;*/
+/*    !*  перекрашиваем шрифт что бы был виден*!*/
+/*    color: #FFF;*/
+/*    !*  Делаем тень*!*/
+/*    !*box-shadow:#757575 ;*!*/
+/*}*/
 
 .btn1 {
     /*  Размеры кнопки*/
@@ -115,14 +119,14 @@ h2{
     /*Закругление формы кнопки*/
     border-radius: 500px;
     /*Расстояние от текста до границы*/
-    padding:14px 0;
+    padding: 14px 0;
 
     /*Сделать текст в верхнем регистре, цвет и стиль*/
     /*text-transform: uppercase;*/
     color: #FF3300;
-    font-weight:400;
-    font-size:15px;
-    line-height:22px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
 
     /*выравнивание текста и его размера*/
     text-align: center;
@@ -136,18 +140,20 @@ h2{
     /* Фон кнопки*/
     background: #FCFDFC;
 }
+
 /*Активация при наведении на кнопки*/
 /*Правильно сделать btn_active*/
 .btn1:hover {
     /*Красим фон*/
-    background:#FF3300;
+    background: #FF3300;
     /*  Делаем прозрачность*/
     opacity: 0.9;
     /*  перекрашиваем шрифт что бы был виден*/
     color: #FFF;
     /*  Делаем тень*/
-    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+    box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.6);
 }
+
 .buttons {
     /*Свойства для родителя блочных элементов для выравнивания*/
     display: flex;
@@ -164,7 +170,8 @@ h2{
 
     /* Отступ заголовка до кнопок*/
     margin-top: 40px;
-    }
+}
+
 .buttons1 {
     /*Свойства для родителя блочных элементов для выравнивания*/
     display: flex;
@@ -178,49 +185,55 @@ h2{
     /*  Растянуть контент по краям*/
     Justify-Content: center;
 }
+
 /*расстояние между блоками кнопок*/
-.one{
-margin-right: 40px;
+.one {
+    margin-right: 40px;
 }
 
 /*меню*/
-.menu{
+.menu {
     margin-bottom: 25px;
     margin-top: 25px;
 }
+
 /*Стилизуем меню по БЭМ*/
-a{
+a {
     /*Убрать стиль ссылок*/
     text-decoration: none;
     /*Цвет текста ссылок*/
     color: #000;
 }
-.nav, .menu{
+
+.nav, .menu {
     display: flex;
     /*  Горизональное выравнивание по центру*/
     align-items: center;
 }
+
 /*Блок*/
-.menu{
+.menu {
     /*  Растянуть блок*/
     width: 100%;
     /*растягиваем в разные стороны*/
     justify-content: space-between;
     margin-right: 900px;
 }
+
 /*Делаем расстояние от логотипа в право*/
 img {
     margin-right: 35px;
 }
 
-.background{
+.background {
     position: absolute;
     width: 118px;
     height: 118px;
-    left: 307px;
+    left: 507px;
     top: 104px;
 }
-.background1{
+
+.background1 {
 
     position: absolute;
     width: 152px;
@@ -229,7 +242,7 @@ img {
     top: 104px;
 }
 
-.nav{
+.nav {
     margin-bottom: 29px;
     margin-top: 18px;
     margin-left: 135px;
