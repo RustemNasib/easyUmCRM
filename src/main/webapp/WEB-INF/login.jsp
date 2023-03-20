@@ -52,9 +52,9 @@
     <h1>
       Система управления студентами и их успеваемостью
     </h1>
-    <img src="../resources/images/square_pattern%201.png" class="background">
-    <img src="../resources/images/square_blur%201.png" class="background1">
-  </div>
+     </div>
+  <img src="../resources/images/square_pattern%201.png" class="background">
+  <img src="../resources/images/square_blur%201.png" class="background1">
 
   <!-- Делаем кнопку -->
   <p class="text-center mt50">
@@ -84,6 +84,8 @@
         <input type="submit" class="btn w300" value="Войти">
       </div>
     </form>
+    <p class = "error-text">(временный логин/пароль: admin/123)</p>
+<%--    Сообщения об ошибке--%>
     <c:if test="${Error eq 1}">
       <p class = "error-text">Авторизация не пройдена!</p>
     </c:if>

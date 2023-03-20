@@ -18,32 +18,37 @@ public class TermsListController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //вытянем из базы данных все семестры для страницы
         DBServices services = new DBServices();
-        List <Term> terms = services.getAllActiveTerms();
+        List<Term> terms = services.getAllActiveTerms();
 
         //полученные из базы данных семестры сажаем в запрос
         req.setAttribute("terms", terms);
 
         //Определим нажал-ли кнопку "Выбрать" пользователь
+        // при изменении семестры на странице и нажатии кнопки выбрать нужно получить id семестра
         String idSelectedTerm = req.getParameter("idSelectedTerm");
-        if (idSelectedTerm == null){
-            if(terms.size()!=0){
+        //если кнопку никто не нажимал, значит idSelectedTerm == null и это первая загрузка
+        if (idSelectedTerm == null) {
+            //Полученные из базы семестры, по умолчанию вытягиваем дисциплины по первому семестру в базе
+            if (terms.size() != 0) {
 
-            //открытие страницы "Семестры"
-            Term SelectedTerm = terms.get(0);
-            req.setAttribute("SelectedTerm", SelectedTerm);
+                //открытие страницы "Семестры"
+                Term SelectedTerm = terms.get(0);
+                req.setAttribute("SelectedTerm", SelectedTerm);
 
-            //Добавим в атрибуты дисциплины этого семестра
-            List <Discipline> disciplines = services.getDisciplinesByTerm(SelectedTerm.getId()+"");
-            req.setAttribute("disciplines", disciplines);
+                //Осталось вытянуть дисциплины
+                //Добавим в атрибуты дисциплины этого семестра
+                List<Discipline> disciplines = services.getDisciplinesByTerm(SelectedTerm.getId() + "");
+                req.setAttribute("disciplines", disciplines);
             }
-        }else {
+        } else {
             //Нажата кнопка "Выбрать" на странице "Семестры"
             //Если idSelectedTerm не null, то вытягиваем его из базы
             Term selectedTerm = services.getTermById(idSelectedTerm);
             req.setAttribute("selectedTerm", selectedTerm);
 
+            //Осталось вытянуть дисциплины
             //Добавим в атрибуты дисциплины этого семестра
-            List <Discipline> disciplines = services.getDisciplinesByTerm(selectedTerm.getId()+"");
+            List<Discipline> disciplines = services.getDisciplinesByTerm(selectedTerm.getId() + "");
             req.setAttribute("disciplines", disciplines);
         }
         // создаем перенаправление

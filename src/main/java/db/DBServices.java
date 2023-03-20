@@ -68,7 +68,7 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("INSERT INTO `crm_easyum_33`.`discipline` (`discipline`) VALUES ('"+discipline+"');\n");
+            stmt.execute("INSERT INTO `crm_easyum_33`.`discipline` (`discipline`) VALUES ('" + discipline + "');\n");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,7 +128,7 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `discipline` = '"+newDiscipline+"' WHERE (`id` = '"+id+"');");
+            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `discipline` = '" + newDiscipline + "' WHERE (`id` = '" + id + "');");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -148,8 +148,9 @@ public class DBServices implements IDBServices {
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
+
             //указываем в качестве результата путь, откуда брать инфу (c Workbench)
-            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `status` = '0' WHERE (`id` = '"+id+"');\n");
+            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `status` = '0' WHERE (`id` = '" + id + "');\n");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -296,7 +297,7 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("UPDATE `crm_easyum_33`.`student` SET `surname` = '"+newSurname+"', `name` = '"+newName+"', `group` = '"+newGroup+"', `date` = '"+newDate+"' WHERE (`id` = '"+id+"');");
+            stmt.execute("UPDATE `crm_easyum_33`.`student` SET `surname` = '" + newSurname + "', `name` = '" + newName + "', `group` = '" + newGroup + "', `date` = '" + newDate + "' WHERE (`id` = '" + id + "');");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -372,7 +373,7 @@ public class DBServices implements IDBServices {
     @Override
     public List<Discipline> getDisciplinesByTerm(String idTerm) {
         //Создаем коллекцию
-        List <Discipline>disciplines = new ArrayList<>();
+        List<Discipline> disciplines = new ArrayList<>();
         //Подключаемся к SQL
         // оборачиваем в try catсh
         try {
@@ -388,7 +389,7 @@ public class DBServices implements IDBServices {
             //указываем в качестве результата путь, откуда брать инфу
             ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term_discipline as td\n" +
                     "left join discipline as d on td.id_discipline = d.id\n" +
-                    "where d.status = '1' and td.id_term = "+idTerm+"");
+                    "where d.status = '1' and td.id_term = " + idTerm + "");
 
             //вывод ResultSet (значения из базы данных) на консоль
             //делаем цикл, что бы наполнить коллекцию List<Student> students = new ArrayList<>()
@@ -415,7 +416,7 @@ public class DBServices implements IDBServices {
 
     //Создать семестр
     @Override
-    public void createTerm(String duration, String idsDisciplines) {
+    public void createTerm(String duration, String[] idsDisciplines) {
         //Подключаемся к SQL
         try {
             //Подключаем драйвер для MySQL
@@ -427,9 +428,50 @@ public class DBServices implements IDBServices {
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
-            //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("INSERT INTO `crm_easyum_33`.`term` (`term`, `duration`, `status`) VALUES ('" + duration + "');\n");
+            //Достаем из БД последний семестр
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where id = (select max(id) FROM term)");
+            Term term = new Term();
+            //Наполнить
+            while (rs.next()) {
+                term.setId(rs.getInt("id"));
+                term.setTerm(rs.getString("term"));
+                term.setDuration(rs.getString("duration"));
+            }
+            //Разрезали слово и цифру {семестр, 9}
+            String[] nameTerm = term.getTerm().split(" ");
 
+
+            //Достанем цифру
+            String x = nameTerm[nameTerm.length - 1];
+
+            // Превращаем String в число int и сохраняем на переменную
+            int i = Integer.parseInt(x) + 1;
+
+            //Увеличенное число записываем String обратно в массив {семестр, 10}
+            nameTerm[nameTerm.length - 1] = i + "";
+
+            //Собираем массив в одно название семестра
+            StringBuffer newTermStr = new StringBuffer();
+            for (String str : nameTerm) {
+                newTermStr.append(str).append(" ");
+            }
+            newTermStr.substring(0, newTermStr.length() - 1);
+
+            //Добавляем новый семестр в БД, чтобы получить id нового семестра
+            stmt.execute("INSERT INTO `crm_easyum_33`.`term` (`term`, `duration`) VALUES ('" + newTermStr + "', '" + duration + "');");
+
+            //Достаем id нового семестра (достаем всю строку и формируем объект с полями)
+            rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where term = '" + newTermStr + "'");
+
+            while (rs.next()) {
+                term.setId(rs.getInt("id"));
+                term.setTerm(rs.getString("term"));
+                term.setDuration(rs.getString("duration"));
+            }
+            //Создаем записи о соответствии нового семестра и дисциплин
+            for (String id_discipline : idsDisciplines) {
+                stmt.execute("INSERT INTO `crm_easyum_33`.`term_discipline` (`id_term`, `id_discipline`) VALUES ('" + term.getId() + "', '" + id_discipline + "');");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -451,7 +493,7 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать информацию
-            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where status = '1' and id = "+id+"");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where status = '1' and id = " + id + "");
 
             //вывод ResultSet (значения из базы данных) на консоль
             //делаем цикл, что бы наполнить коллекцию List<Term> term = new ArrayList<>()
@@ -479,7 +521,7 @@ public class DBServices implements IDBServices {
 
     //Модифицировать семестр
     @Override
-    public void modifyTerm(String id, String newDuration, String newIdsDisciplines) {
+    public void modifyTerm(String id, String newDuration, String[] newIdsDisciplines) {
 //Подключаемся к SQL
         try {
             //Подключаем драйвер для MySQL
@@ -492,8 +534,15 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("UPDATE `crm_easyum_33`.`student` SET `duration` = '"+newDuration+"' WHERE (`id` = '"+id+"');");
+            stmt.execute("UPDATE `crm_easyum_33`.`term` SET `duration` = '" + newDuration + "' WHERE (`id` = '" + id + "');");
 
+            //Удалим все записи связей текущего семестра с дисциплинами в term_discipline
+            stmt.execute("DELETE FROM `crm_easyum_33`.`term_discipline` WHERE (`id_term` = '" + id + "');");
+
+            //Добавляем новые записи
+            for (String id_discipline : newIdsDisciplines) {
+                stmt.execute("INSERT INTO `crm_easyum_33`.`term_discipline` (`id_term`, `id_discipline`) VALUES ('" + id + "', '" + id_discipline + "');");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -592,10 +641,10 @@ public class DBServices implements IDBServices {
             //указываем в качестве результата путь, откуда брать инфу (c Workbench)
             ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.user_role as ur\n" +
                     "left join user as u on ur.id_user = u.id\n" +
-                    "where u.login = '"+login+"' and u.password = '"+password+"' and ur.id_role = "+idRole+"");
+                    "where u.login = '" + login + "' and u.password = '" + password + "' and ur.id_role = " + idRole + "");
 
 //возвращаем  true если такой пользователь уже есть
-            while (rs.next()){
+            while (rs.next()) {
                 return true;
             }
 

@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
@@ -75,57 +74,46 @@
         Для создания семестра заполните следующие данные и нажмите кнопу "Создать"
     </h2>
 </div>
+
 <img src="../resources/images/square_pattern%201.png" class="background">
 <img src="../resources/images/square_blur%201.png" class="background1">
 
 <div class="container">
-    <ul class="bot">
-        <li class="li1">
-            <a>Длительность (в неделях)</a>
-        </li>
-        <li>
-            <a class="b1" href="#">24</a>
-        </li>
-    </ul>
-</div>
-</div>
-<div class="container">
-
-    <ul class="bot">
-        <li class="li2">
-            <a>Дисциплины в семестре</a>
-        </li>
-
-
-        <div  class="li3 text">
-            <a href="#"><p>Информатика</p></a>
-            <a href="#"><p>Политология</p></a>
-            <a href="#"><p>Социология</p></a>
-            <a href="#"><p>Высшая Математика</p></a>
-            <a href="#"><p>Теория Алгоритмизации</p></a>
-            <a href="#"><p>Теория Игр</p></a>
-            <a href="#"><p>Булева Алгебра</p></a>
-            <a href="#"><p>Системный анализ</p></a>
+    <form action="/termsCreating" method="post">
+        <div class="bot">
+            <div class="li1">
+                <p>Длительность (в неделях)</p>
+            </div>
+            <div>
+                <input type="number" class="b1" placeholder="24" name="duration">
+            </div>
         </div>
 
-<%--        <tbody class="tbody">--%>
-<%--        <div  class="li3 text">--%>
-<%--        <c:forEach items="${disciplines}" var="d">--%>
-<%--            <tr>--%>
-<%--                <td class="td">${d.discipline}</td>--%>
-<%--            </tr>--%>
-<%--        </c:forEach>--%>
-<%--        </div>--%>
-<%--        </tbody>--%>
+
+        <div class="bot">
+            <div class="li2">
+                <p>Дисциплины в семестре</p>
+            </div>
 
 
-    </ul>
+            <div class="mt30">
+                <select name="selectDisciplines" class="select-discipline" multiple required>
+                    <c:forEach items="${disciplines}" var="d">
+                        <option value="${d.id}">${d.discipline}</option>
+                    </c:forEach>
+                </select>
+            </div>
 
+        </div>
 
-    <div class="li5">
-        <a href="#" class="b2">СОЗДАТЬ</a>
-    </div>
+        <div class="li5">
+            <input type="submit" value="СОЗДАТЬ" class="b2">
+        </div>
+    </form>
 </div>
-
 </body>
+
+<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
+<script src="../resources/js/functions.js"></script>
+
 </html>

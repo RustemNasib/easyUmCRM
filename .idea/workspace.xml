@@ -9,25 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes 0208">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LogoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/filters/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/filters/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes 0303">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentCreatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentModifyingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentModifyingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBServices.java" afterDir="false" />
@@ -35,20 +22,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentCreating.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentProgress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentProgress.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ternsModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentCreating3.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentCreating3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentModifying2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentModifying2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentsList1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/StudentsList1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsCreating10.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsCreating10.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsModifying11.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsModifying11.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" afterDir="false" />
     </list>
     <list id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
@@ -113,7 +94,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nasib/IdeaProjects/easyUmCRM/src/main/webapp/resources/css/main.css&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nasib/IdeaProjects/easyUmCRM&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -121,7 +102,8 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.obiscr.chatgpt.settings.ChatGPT&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -337,6 +319,31 @@
       <workItem from="1677750749544" duration="3432000" />
       <workItem from="1677824607422" duration="207000" />
       <workItem from="1677824829033" duration="25512000" />
+      <workItem from="1677861509038" duration="1521000" />
+      <workItem from="1677916498646" duration="6800000" />
+      <workItem from="1677926714457" duration="851000" />
+      <workItem from="1677929807354" duration="41000" />
+      <workItem from="1677929862178" duration="185000" />
+      <workItem from="1677930058925" duration="22000" />
+      <workItem from="1677930094114" duration="199000" />
+      <workItem from="1677930305996" duration="251000" />
+      <workItem from="1677930568088" duration="5286000" />
+      <workItem from="1678082942824" duration="323000" />
+      <workItem from="1678084578912" duration="1273000" />
+      <workItem from="1678264258367" duration="1510000" />
+      <workItem from="1678277101296" duration="1699000" />
+      <workItem from="1678366893526" duration="78000" />
+      <workItem from="1678378713738" duration="47000" />
+      <workItem from="1678378779218" duration="6420000" />
+      <workItem from="1678434341638" duration="7454000" />
+      <workItem from="1678446496689" duration="15756000" />
+      <workItem from="1678525592320" duration="6731000" />
+      <workItem from="1678804449634" duration="30000" />
+      <workItem from="1678983690885" duration="7416000" />
+      <workItem from="1679038695732" duration="923000" />
+      <workItem from="1679125779499" duration="1958000" />
+      <workItem from="1679128275045" duration="408000" />
+      <workItem from="1679129164052" duration="4951000" />
     </task>
     <task id="LOCAL-00001" summary="changes 0123">
       <created>1673511702593</created>
@@ -387,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675846320616</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changes 0303">
+      <created>1677861818734</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677861818734</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,15 +422,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changes 0123" />
     <MESSAGE value="changes 0208" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes 0208" />
+    <MESSAGE value="changes 0303" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes 0303" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/constants/Constants.java</url>
-          <line>4</line>
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java</url>
+          <line>30</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/TermsListController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/TermsListController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

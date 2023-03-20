@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!doctype html>
 <html lang="ru">
@@ -32,7 +33,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Подключаем css -->
+    <!-- Подключаем css для js-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../resources/css/DisciplineModifying8.css">
+
 </head>
 <body>
 <div class="container">
@@ -69,11 +73,15 @@
     </h1>
     <!--    Печатаем строку над таблицей-->
     <h2 class="line">
-        Для того, чтобы модифицировать дисциплину, введите новое значение поля и нажмите кнопку "Применить"
+        Для модификации, введите новое значение поля и нажмите кнопку "Применить"
     </h2>
 </div>
+
 <img src="../resources/images/square_pattern%201.png" class="background">
 <img src="../resources/images/square_blur%201.png" class="background1">
+
+
+
 
 <!-- Делаем кнопки -->
 <div>
@@ -93,4 +101,7 @@
     </form>
 </div>
 </body>
+<%--    Подключаем Java Script --%>
+<script src="../resources/js/functions.js"></script>
+
 </html>

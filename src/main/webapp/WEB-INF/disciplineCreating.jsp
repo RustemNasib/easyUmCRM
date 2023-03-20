@@ -96,4 +96,6 @@
 </div>
 </body>
 
+<%--    Подключаем Java Script --%>
+<script src="../resources/js/functions.js"></script>
 </html>

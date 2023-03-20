@@ -23,7 +23,7 @@ public class DisciplinesModifyingController extends HttpServlet {
         DBServices services = new DBServices();
         Discipline discipline = services.getDisciplineById(id);
 
-        //Дисциплину из sql перенаправить в запросе на studentModifying.jsp
+        //Дисциплину из sql перенаправить в запросе на disciplinesModifying.jsp
         req.setAttribute("discipline", discipline);
         req.getRequestDispatcher("WEB-INF/disciplinesModifying.jsp").forward(req, resp);
     }

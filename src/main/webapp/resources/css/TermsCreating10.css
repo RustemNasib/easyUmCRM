@@ -20,6 +20,7 @@ body {
     /*  Цвет фона*/
     background: #FCFDFC;
 }
+
 .container {
     width: 1072px;
     margin: 0 auto;
@@ -40,27 +41,28 @@ li {
 }
 
 /*меню*/
-.menu{
+.menu {
     margin-bottom: 29px;
     margin-top: 35px;
 }
+
 /*Стилизуем меню по БЭМ*/
 
-a{
+a {
     /*Убрать стиль ссылок*/
     text-decoration: none;
     /*Цвет текста ссылок*/
     color: #000;
 }
 
-.nav, .menu{
+.nav, .menu {
     display: flex;
     /*  Горизональное выравнивание по центру*/
     align-items: center;
 }
 
 /*Блок*/
-.menu{
+.menu {
     /*  Растянуть блок*/
     width: 100%;
     /*растягиваем в разные стороны*/
@@ -71,22 +73,25 @@ a{
 img {
     margin-right: 33px;
 }
-.background{
+
+.background {
     position: absolute;
     width: 118px;
     height: 118px;
     left: 525px;
     top: 112px;
 }
-.background1{
+
+.background1 {
     position: absolute;
     width: 152px;
     height: 139px;
     left: 1204px;
     top: 108px;
 }
+
 /*Расстояние между ссылками в меню*/
-.a{
+.a {
     /*position: absolute;*/
     width: 109px;
     height: 27px;
@@ -99,8 +104,9 @@ img {
     line-height: 27px;
     /* identical to box height */
     color: #000000;
-    margin-right:55px;
+    margin-right: 55px;
 }
+
 .b {
     /*position: absolute;*/
     width: 49px;
@@ -118,21 +124,22 @@ img {
 
     margin-right: 750px;
 }
-    .c{
-        /*position: absolute;*/
-        width: 55px;
-        height: 27px;
-        /*left: 1285px;*/
-        top: 35px;
 
-        font-family: 'Circe';
-        font-style: normal;
-        font-weight: 350;
-        font-size: 18px;
-        line-height: 27px;
-        /* identical to box height */
-        text-align: right;
-        color: #000000;
+.c {
+    /*position: absolute;*/
+    width: 55px;
+    height: 27px;
+    /*left: 1285px;*/
+    top: 35px;
+
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    text-align: right;
+    color: #000000;
 }
 
 /*Активация при наведении на ссылку*/
@@ -143,6 +150,7 @@ img {
     /* и перекрашивается цвет*/
     color: #2266DA;
 }
+
 /*Надписи заголовок и строка*/
 h1 {
     /*position: absolute;*/
@@ -158,8 +166,8 @@ h1 {
     color: #000000;
 }
 
-h2{
-    font-size:20px ;
+h2 {
+    font-size: 20px;
     font-weight: 350;
     text-align: center;
     color: #000000;
@@ -169,7 +177,7 @@ h2{
 }
 
 /*выстраиваем элементы в одну строку*/
-.bot{
+.bot {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -190,20 +198,22 @@ h2{
     text-decoration: none;
 
     /*Граница вокруг кнопки толщина и цвет*/
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+    border: 1px solid #2575FC;
+    border-radius: 10px;
 
     /*Закругление формы кнопки*/
     border-radius: 500px;
 
     /*Расстояние от текста до границы*/
-    padding:14px 0;
+    padding: 14px 0;
 
     /*Сделать текст в верхнем регистре, цвет и стиль*/
     /*text-transform: uppercase;*/
     color: #757575;
-    font-weight:400;
-    font-size:15px;
-    line-height:22px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
 
     /*Задаем свойство блоков ссылкам кнопкам*/
     display: block;
@@ -218,18 +228,18 @@ h2{
 
 /*Активация при наведении на кнопки*/
 /*Правильно сделать btn_active*/
-.b1:hover {
-    /*Красим фон*/
-    background:#757575;
-    /*  Делаем прозрачность*/
-    opacity: 0.7;
-    /*  перекрашиваем шрифт что бы был виден*/
-    color: #FFF;
-    /*  Делаем тень*/
-    /*box-shadow:#757575 ;*/
-}
+/*.b1:hover {*/
+/*    !*Красим фон*!*/
+/*    background: #757575;*/
+/*    !*  Делаем прозрачность*!*/
+/*    opacity: 0.7;*/
+/*    !*  перекрашиваем шрифт что бы был виден*!*/
+/*    color: #FFF;*/
+/*    !*  Делаем тень*!*/
+/*    !*box-shadow:#757575 ;*!*/
+/*}*/
 
-.li1{
+.li1 {
     /*position: absolute;*/
     width: 171px;
     height: 22px;
@@ -241,10 +251,11 @@ h2{
     font-size: 15px;
     line-height: 22px;
     color: #000000;
-    margin-top: 56px;
+    margin-top: 46px;
     margin-left: 190px;
 }
-.li2{
+
+.li2 {
     width: 163px;
     height: 22px;
     left: 374px;
@@ -258,52 +269,55 @@ h2{
     margin-top: 60px;
     margin-left: 190px;
 }
-/*таблица скролл*/
-.li3{
-    overflow-y: scroll;
-    /*box-sizing: border-box;*/
-    /*position: absolute;*/
-    width: 300px;
-    height: 311px;
-    left: 570px;
-    top: 378px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    margin-left: 33px;
-    margin-top: 40px;
-}
+
+/*!*таблица скролл*!*/
+/*.li3 {*/
+/*    !*overflow-y: scroll;*!*/
+/*    !*box-sizing: border-box;*!*/
+/*    !*position: absolute;*!*/
+/*    width: 300px;*/
+/*    height: 311px;*/
+/*    left: 570px;*/
+/*    top: 378px;*/
+/*    background: #FFFFFF;*/
+/*    border: 1px solid #000000;*/
+/*    border-radius: 5px;*/
+/*    margin-left: 33px;*/
+/*    margin-top: 40px;*/
+/*}*/
+
 /*форма прокрутки*/
 
 /*задаем цвет фона и толщину полосы*/
-.li3::-webkit-scrollbar {
-    box-sizing: border-box;
-    position: absolute;
-    width: 14px;
-    height: 16px;
+/*.li3::-webkit-scrollbar {*/
+/*    box-sizing: border-box;*/
+/*    position: absolute;*/
+/*    width: 14px;*/
+/*    height: 16px;*/
 
-    background: #FCFDFC;
-    opacity: 0.9;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    transform: rotate(-90deg);
-}
+/*    background: #FCFDFC;*/
+/*    opacity: 0.9;*/
+/*    border: 1px solid #000000;*/
+/*    border-radius: 5px;*/
+/*    transform: rotate(-90deg);*/
+/*}*/
+
 /*цвет и размер бегунка*/
-.li3::-webkit-scrollbar-thumb {
+/*.li3::-webkit-scrollbar-thumb {*/
 
-    position: absolute;
-    height:18px;
-    width: 8px;
-    left: 3px;
-    top: 5px;
-    margin: 0;
-    background: #2575FC;
-    border-radius: 5px;
-    border: 1px solid #2575FC;
-}
+/*    position: absolute;*/
+/*    height: 18px;*/
+/*    width: 8px;*/
+/*    left: 3px;*/
+/*    top: 5px;*/
+/*    margin: 0;*/
+/*    background: #2575FC;*/
+/*    border-radius: 5px;*/
+/*    border: 1px solid #2575FC;*/
+/*}*/
 
 /*текст внутри прокрутки*/
-.text{
+.text {
     font-family: 'Circe';
     font-style: normal;
     font-weight: 400;
@@ -314,13 +328,14 @@ h2{
     padding-bottom: 5px;
 }
 
-p{
-    background:#FFF;
+p {
+    background: #FFF;
     color: #757575;
 }
+
 /*link, visited,hover, active*/
-p:hover{
-    background:#757575;
+p:hover {
+    background: #757575;
     opacity: 50%;
     /*  перекрашиваем шрифт что бы был виден*/
     color: #FFF;
@@ -347,14 +362,14 @@ p:hover{
     /*Закругление формы кнопки*/
     border-radius: 500px;
     /*Расстояние от текста до границы*/
-    padding:24px 0;
+    padding: 24px 0;
 
     /*Сделать текст в верхнем регистре, цвет и стиль*/
     /*text-transform: uppercase;*/
     color: #FF3300;
-    font-weight:400;
-    font-size:15px;
-    line-height:24px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
 
     /*выравнивание текста и его размера*/
     text-align: center;
@@ -368,20 +383,58 @@ p:hover{
 
     /* Фон кнопки*/
     background: #FCFDFC;
-
 }
+
 /*Активация при наведении на кнопки*/
 /*Правильно сделать btn_active*/
 .b2:hover {
-    /*Красим фон*/
-    background:#FF3300;
-    /*  Делаем прозрачность*/
+    background: #FF3300;
     opacity: 0.9;
-    /*  перекрашиваем шрифт что бы был виден*/
-    text-color: #FFF;
-    /*  Делаем тень*/
-    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+    color: #fff;
+
+    box-shadow: 3px 5px 10px rgba(255,51,0, 0.6);
 }
+
+.select-discipline {
+    /*Размеры кнопки*/
+    width: 300px;
+    height: 311px;
+
+    /*Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки*/
+    border: 1px solid #000;
+    border-radius: 5px;
+    /*Граница вокруг кнопки*/
+    /*border: 1px solid #2575FC;*/
+    /*border-radius: 10px;*/
+
+    /*Расстояние от текста до границы*/
+    padding: 15px 25px;
+
+    /*Сделать текст в верхнем регистре и цвет и стиль*/
+    color: #757575;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 16px;
+
+    /*Задаем свойство блоков ссылкам (кнопкам)*/
+    display: block;
+
+    /*Фон кнопки*/
+    background: #FCFDFC;
+    opacity: 0.9;
+
+    /*Тень для кнопки*/
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mt30 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 
 
 

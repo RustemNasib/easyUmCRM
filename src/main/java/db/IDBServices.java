@@ -53,13 +53,13 @@ public interface IDBServices {
     List<Discipline> getDisciplinesByTerm(String idTerm);
 
     //Создать семестр
-    void createTerm(String duration, String idsDisciplines);
+    void createTerm(String duration, String[] idsDisciplines);
 
     //Получить семестр по id
     Term getTermById(String id);
 
     //Модифицировать семестр
-    void modifyTerm(String id, String newDuration, String newIdsDisciplines);
+    void modifyTerm(String id, String newDuration, String[] newIdsDisciplines);
 
     //Удалить семестр
     void deleteTerm(String id);

@@ -141,7 +141,7 @@
 
 <%--Форма для удаления студентов--%>
 <%--/studentDelete urlPattern в контроллере--%>
-<form action="/disciplineDelete" method="post" id="formDelete">
+<form action="/studentDelete" method="post" id="formDelete">
     <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
 </form>
 

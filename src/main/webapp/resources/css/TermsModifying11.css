@@ -190,7 +190,9 @@ h2{
     text-decoration: none;
 
     /*Граница вокруг кнопки толщина и цвет*/
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+    border: 1px solid #2575FC;
+    border-radius: 10px;
 
     /*Закругление формы кнопки*/
     border-radius: 500px;
@@ -216,18 +218,18 @@ h2{
 
 }
 
-/*Активация при наведении на кнопки*/
-/*Правильно сделать btn_active*/
-.b1:hover {
-    /*Красим фон*/
-    background:#757575;
-    /*  Делаем прозрачность*/
-    opacity: 0.7;
-    /*  перекрашиваем шрифт что бы был виден*/
-    color: #FFF;
-    /*  Делаем тень*/
-    /*box-shadow:#757575 ;*/
-}
+/*!*Активация при наведении на кнопки*!*/
+/*!*Правильно сделать btn_active*!*/
+/*.b1:hover {*/
+/*    !*Красим фон*!*/
+/*    background:#757575;*/
+/*    !*  Делаем прозрачность*!*/
+/*    opacity: 0.7;*/
+/*    !*  перекрашиваем шрифт что бы был виден*!*/
+/*    color: #FFF;*/
+/*    !*  Делаем тень*!*/
+/*    !*box-shadow:#757575 ;*!*/
+/*}*/
 
 .li1{
     /*position: absolute;*/
@@ -369,16 +371,51 @@ p:active{
     background: #FCFDFC;
 
 }
-/*Активация при наведении на кнопки*/
-/*Правильно сделать btn_active*/
 .b2:hover {
-    /*Красим фон*/
-    background:#FF3300;
-    /*  Делаем прозрачность*/
+    background: #FF3300;
     opacity: 0.9;
-    /*  перекрашиваем шрифт что бы был виден*/
-    color: #FFF;
-    /*  Делаем тень*/
-    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+    color: #fff;
+
+    box-shadow: 3px 5px 10px rgba(255,51,0, 0.6);
+}
+
+.select-discipline {
+    /*Размеры кнопки*/
+    width: 300px;
+    height: 311px;
+
+    /*Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки*/
+    border: 1px solid #000;
+    border-radius: 5px;
+    /*Граница вокруг кнопки*/
+    /*border: 1px solid #2575FC;*/
+    /*border-radius: 10px;*/
+
+    /*Расстояние от текста до границы*/
+    padding: 15px 25px;
+
+    /*Сделать текст в верхнем регистре и цвет и стиль*/
+    color: #757575;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 16px;
+
+    /*Задаем свойство блоков ссылкам (кнопкам)*/
+    display: block;
+
+    /*Фон кнопки*/
+    background: #FCFDFC;
+    opacity: 0.9;
+
+    /*Тень для кнопки*/
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mt30 {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 

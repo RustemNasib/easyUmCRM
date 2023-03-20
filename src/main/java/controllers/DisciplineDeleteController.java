@@ -22,7 +22,7 @@ public class DisciplineDeleteController extends HttpServlet {
 // Разбиваем id-шники
         String[] ids = idsToDelete.split(" ");
 
-        // Удаляем по-одной дисциплине
+        // Удаляем по одной дисциплине
         for (String id : ids) {
             services.deleteDiscipline(id);
         }

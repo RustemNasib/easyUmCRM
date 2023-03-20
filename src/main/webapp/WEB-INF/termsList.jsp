@@ -36,6 +36,7 @@
     <!-- Подключаем css -->
     <link rel="stylesheet" href="../resources/css/TermsList9.css">
 </head>
+<body>
 
 <div>
     <header id="header" class="header">
@@ -109,20 +110,19 @@
                 <!-- Заголовочная строка таблицы-->
                 <thead class="thead">
                 <!--  tr - строка таблицы-->
-                <tr>
+                    <tr>
                     <!--  th- заголовок ячейки таблицы-->
-                    <th class="td">Наименование дисциплины</th>
-                </tr>
+                        <th class="td">Наименование дисциплины</th>
+                    </tr>
                 </thead>
                 <!--tbody - определяет тело таблицы-->
                 <tbody class="tbody">
                 <!--  tr - создание строки таблицы-->
-                <c:forEach items="${disciplines}" var="d">
-                    <tr>
-                        <td class="td">${d.discipline}</td>
-                    </tr>
-                </c:forEach>
-
+                    <c:forEach items="${disciplines}" var="d">
+                        <tr>
+                            <td class="td">${d.discipline}</td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
 
@@ -130,10 +130,11 @@
             <div class="buttons">
                 <div style="float: right;">
                     <a href="/termsCreating" methods="get" class="btn">Создать семестр...</a>
-<%--                    <a href="/termsModifying" methods="get" class="btn">Модифицировать текущий семестр...</a>--%>
-<%--                    <input type="submit" value="Модифицировать текущий семестр..." class="btn" onclick="modifyTerms()">--%>
+
+                    <%--                    <a href="/termsModifying" methods="get" class="btn">Модифицировать текущий семестр...</a>--%>
+
                     <c:if test="${role eq 1}">
-                        <input type="submit" value="Модифицировать выбранного студента" class="btn" onclick="modifyTerms()">
+                        <input type="submit" value="Модифицировать текущий семестр" class="btn" onclick="modifyTerms()">
                         <%--        onclick="modifyStudent()" - атририбут функции, прописываемый в JS    --%>
                     </c:if>
 
@@ -154,11 +155,12 @@
 </form>
 
 <%--Форма для модификации семестра--%>
-<form action="/termsModifying" method="get" id="formModify">
-    <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
+<form action="/termsModifying" method="get" id="formModifyTerm">
+    <input type="hidden" value="" name="hiddenModifyTerm" id="hiddenModifyTerm">
 </form>
 
-<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
-<script src="../resources/js/functions.js"></script>
 
+</body>
+<%--ПОДКЛЮЧАЕМ JAVA SCRIPT--%>
+<script src="../resources/js/functions.js?v.2"></script>
 </html>
