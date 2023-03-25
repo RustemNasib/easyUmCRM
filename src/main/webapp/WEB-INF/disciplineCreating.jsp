@@ -84,7 +84,7 @@
             <%--    <a href="#" class="btn b1">Название</a>--%>
             <%--    кнопка на теге "а" не умеет оправлять данные из input--%>
 
-            <input type="text" class="btn b1" placeholder="Название" name="discipline">
+            <input type="text" class="btn b1" placeholder="Название" name="newDiscipline">
         </div>
 
         <div class="container buttons1">
@@ -94,6 +94,10 @@
         </div>
     </form>
 </div>
+<%--Сообщение об ошибке пустого поля--%>
+<c:if test="${Error eq 1}">
+    <p class="error-text">Поле "Название" не заполнено!!!</p>
+</c:if>
 </body>
 
 <%--    Подключаем Java Script --%>

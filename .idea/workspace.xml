@@ -9,27 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes 0303">
+    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes2003">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesModifyingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsModifyingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/IDBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/IDBServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsCreating.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsCreating10.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsCreating10.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsModifying11.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsModifying11.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" afterDir="false" />
     </list>
     <list id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
@@ -90,20 +84,24 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nasib/IdeaProjects/easyUmCRM&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/бибилиотеки/SpingFrameworkStereotip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.obiscr.chatgpt.settings.ChatGPT&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -344,6 +342,19 @@
       <workItem from="1679125779499" duration="1958000" />
       <workItem from="1679128275045" duration="408000" />
       <workItem from="1679129164052" duration="4951000" />
+      <workItem from="1679306622109" duration="1621000" />
+      <workItem from="1679308263011" duration="6240000" />
+      <workItem from="1679378257268" duration="3542000" />
+      <workItem from="1679388298746" duration="10000" />
+      <workItem from="1679388321336" duration="728000" />
+      <workItem from="1679466703422" duration="744000" />
+      <workItem from="1679468864773" duration="5517000" />
+      <workItem from="1679475556407" duration="2640000" />
+      <workItem from="1679588080413" duration="8612000" />
+      <workItem from="1679657984539" duration="2893000" />
+      <workItem from="1679671226253" duration="73000" />
+      <workItem from="1679672758044" duration="486000" />
+      <workItem from="1679727701471" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="changes 0123">
       <created>1673511702593</created>
@@ -401,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677861818734</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changes2003">
+      <created>1679307788629</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679307788629</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,16 +441,12 @@
     <MESSAGE value="changes 0123" />
     <MESSAGE value="changes 0208" />
     <MESSAGE value="changes 0303" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes 0303" />
+    <MESSAGE value="changes2003" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes2003" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/TermsListController.java</url>
           <line>40</line>

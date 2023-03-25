@@ -87,25 +87,14 @@ function deleteDiscipline() {
 }
 
 function deleteTerms() {
-    //Получаем массив input со всеми вложенными атрибутами которые у нас checked(с галочкой)
-    var checkedCheckBoxes = document.querySelectorAll("input[name=idTerms]:checked");
+    //Получить id семестра
+    var idSelectedTerm = document.querySelector('option[selected]');
 
-// // Проверка на наличие галочек
-//     if (checkedCheckBoxes.length == 0) {
-//         alert("Please select term.");
-//         return;
-//     }
-
-    //Формируем переменную String в которой перечисляем id через пробел: String = (5 6 7 8 )
-    // var ids = "";
-    // for (var i = 0; i < checkedCheckBoxes.length; i++) {
-    //     ids = ids + checkedCheckBoxes[i].value + " ";
-    // }
 
 //Заполним value = "" у input formDelete
-    document.getElementById("hiddenDelete").value = checkedCheckBoxes.value;
+    document.getElementById("hiddenDeleteTerm").value = idSelectedTerm.value;
     //Нажать кнопку программно, что бы отправить форму на сервер
-    document.getElementById("formDelete").submit();
+    document.getElementById("formDeleteTerm").submit();
 }
 
 function modifyTerms() {

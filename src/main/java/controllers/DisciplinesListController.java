@@ -21,10 +21,10 @@ import java.util.List;
             DBServices dbServices = new DBServices();
 
             //Вызвать метод getAllActiveStudents, что бы достать всех активных студентов из SQL
-            List<Discipline> disciplines = dbServices.getAllActiveDisciplines();
+            List<Discipline> disciplineList = dbServices.getAllActiveDisciplines();
 
             //Дополняем полученными данными из SQL request(запрос)
-            req.setAttribute("allActiveDisciplines", disciplines);
+            req.setAttribute("dList", disciplineList);
 
             //resp.getWriter().println("Hello");
             req.getRequestDispatcher("WEB-INF/disciplinesList.jsp").forward(req, resp);

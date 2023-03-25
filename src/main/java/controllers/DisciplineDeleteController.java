@@ -17,15 +17,16 @@ public class DisciplineDeleteController extends HttpServlet {
         DBServices services = new DBServices();
 
 //        Сохранить String полученный из формы
-        String idsToDelete = req.getParameter("hiddenDelete");
-
+        String idToDelete = req.getParameter("hiddenDelete");
 // Разбиваем id-шники
-        String[] ids = idsToDelete.split(" ");
+        String[] ids = idToDelete.split(" ");
 
-        // Удаляем по одной дисциплине
+        // Удаляем по-одной дисциплине
         for (String id : ids) {
             services.deleteDiscipline(id);
         }
+
+
         // Далее перенаправляем пользователя на /disciplinesList.jsp
         resp.sendRedirect("/disciplinesList");
     }

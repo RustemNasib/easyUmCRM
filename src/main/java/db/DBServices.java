@@ -128,7 +128,7 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
             //указываем в качестве результата путь, откуда брать инфу
-            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `discipline` = '" + newDiscipline + "' WHERE (`id` = '" + id + "');");
+            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `discipline` = '" + newDiscipline + "' WHERE (`id` = '" + id + "');\n");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -149,8 +149,10 @@ public class DBServices implements IDBServices {
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
 
-            //указываем в качестве результата путь, откуда брать инфу (c Workbench)
-            stmt.execute("UPDATE `crm_easyum_33`.`discipline` SET `status` = '0' WHERE (`id` = '" + id + "');\n");
+//            //Обнуляем id дисциплины
+//            stmt.execute("UPDATE `crm_easyum_33`.`discipline` WHERE (`id` = '" + id + "');\n");
+            //Удалим дисциплину
+            stmt.execute("DELETE FROM `crm_easyum_33`.`discipline` WHERE (`id` = '" + id + "')");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -561,13 +563,48 @@ public class DBServices implements IDBServices {
             //Statement (выбираем вариант подключения к базе данных sql)
             //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
             Statement stmt = conn.createStatement();
-            //указываем в качестве результата путь, откуда брать инфу (c Workbench)
-            stmt.execute("UPDATE `crm_easyum_33`.`term` SET `status` = '0' WHERE (`id` = '" + id + "');\n");
+
+            //Удалим все записи из term_discipline
+            stmt.execute("DELETE FROM `crm_easyum_33`.`term_discipline` WHERE (`id_term` = '" + id + "')");
+
+            //Удалим семестр
+            stmt.execute("DELETE FROM `crm_easyum_33`.`term` WHERE (`id` = '" + id + "')");
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+    @Override
+    public boolean isItLastTerm() {
+        try {
+            //Подключаем драйвер для MySql
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Указать путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+            //Statement
+            Statement stmt = conn.createStatement();
+            //Запрос
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term");
+
+            List<Term> terms = new ArrayList<>();
+            while (rs.next()) {
+                Term term = new Term();
+                term.setId(rs.getInt("id"));
+                terms.add(term);
+            }
+
+            if(terms.size() == 1){
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     //Получить все оценки по студенту по семестру
@@ -654,4 +691,34 @@ public class DBServices implements IDBServices {
 //        если такого пользователя нет то
         return false;
     }
+
+    @Override
+    public Term getLastTerm() {
+        try {
+            //Подключаем драйвер для MySql
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Указать путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+            //Statement
+            Statement stmt = conn.createStatement();
+            //Запрос - достать последний семестр
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where id = (SELECT max(id) FROM term)");
+
+            Term term = new Term();
+            while (rs.next()) {
+                term.setId(rs.getInt("id"));
+                term.setTerm(rs.getString("term"));
+                term.setDuration(rs.getString("duration"));
+            }
+
+
+                return term;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

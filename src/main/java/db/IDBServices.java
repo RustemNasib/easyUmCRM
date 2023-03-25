@@ -64,6 +64,9 @@ public interface IDBServices {
     //Удалить семестр
     void deleteTerm(String id);
 
+// Проверка если последний семестр
+    boolean isItLastTerm();
+
     //  =========== ПРОЧЕЕ ==========
     //Получить все оценки по студенту по семестру
     List<Mark> getMarks(String idStudent, String idTerm);
@@ -73,4 +76,7 @@ public interface IDBServices {
 
     //Проверка доступа
     boolean canLogin(String login, String password, String idRole);
+
+    //Вернуть последний семестр по id
+    Term getLastTerm();
 }

@@ -95,12 +95,12 @@
 
         <!--tbody - определяет тело таблицы-->
         <tbody class="tbody">
-        <c:forEach items="${allActiveDisciplines}" var="discipline">
+        <c:forEach items="${dList}" var="d">
             <tr>
                 <td class="td-ch">
-                    <input type="checkbox" class="check__item" value="${discipline.id}" name="idDiscipline">
+                    <input type="checkbox" class="check__item" value="${d.id}" name="idDiscipline">
                 </td>
-                <td class="td">${discipline.discipline}</td>
+                <td class="td">${d.discipline}</td>
             </tr>
         </c:forEach>
         </tbody>

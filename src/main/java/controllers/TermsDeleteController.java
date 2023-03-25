@@ -17,15 +17,13 @@ public class TermsDeleteController extends HttpServlet {
         //Объект подключения к SQL
         DBServices services = new DBServices();
 
-//        Сохранить String полученный из формы
-        String idsToDelete = req.getParameter("hiddenDelete");
+    // Сохранить String полученный из формы
+       String idTermToDelete = req.getParameter("hiddenDeleteTerm");
 
-// Разбивааем id-шники
-        String[] ids = idsToDelete.split(" ");
-
-        // Удаляем по-одному семестру
-        for (String id : ids) {
-            services.deleteTerm(id);
+    // Удаляем по id
+        //проверяем если не последний семестр
+        if (!services.isItLastTerm()) {
+            services.deleteTerm(idTermToDelete);
         }
         // Далее перенаправляем пользователя на /termsList.jsp
         resp.sendRedirect("/termsList");

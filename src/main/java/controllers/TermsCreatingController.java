@@ -2,6 +2,7 @@ package controllers;
 
 import db.DBServices;
 import entity.Discipline;
+import entity.Term;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,8 +30,12 @@ public class TermsCreatingController extends HttpServlet {
             //Создаем объект подключения к базе данных для вызова метода создать семестр
             DBServices services = new DBServices();
             services.createTerm(duration, selectDisciplines);
+
+            Term lastTerm = services.getLastTerm();
+String idLastTerm = String.valueOf(lastTerm.getId());
+
             //Перенаправляем клиента на termsList.jsp
-            resp.sendRedirect("/termsList");
+            resp.sendRedirect("/termsList?idSelectedTerm="+idLastTerm);
         }
 
     }

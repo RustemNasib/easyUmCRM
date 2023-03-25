@@ -86,37 +86,36 @@
                 <input type="text" class="b1" placeholder="${term.duration}" name="newDuration">
             </div>
         </div>
-<%--    </form>--%>
+        <%--    </form>--%>
 </div>
 
 <div class="container">
-<%--    <form action="/termsModifying" method="post">--%>
-        <%--        accept-charset="US-ASCII" позволяет вводить данные при создании студента на русском языке--%>
-        <%--    Нужно передавать id строки которую правим--%>
-        <input type="hidden" name="idTerm" value="${term.id}">
+    <%--    <form action="/termsModifying" method="post">--%>
+    <%--        accept-charset="US-ASCII" позволяет вводить данные при создании студента на русском языке--%>
+    <%--    Нужно передавать id строки которую правим--%>
+    <input type="hidden" name="idTerm" value="${term.id}">
 
-        <div class="bot">
-            <div class="li2">
-                <p>Дисциплины в семестре</p>
-            </div>
-
-
-            <div class="mt30">
-                <select name="newIdsDisciplines" class="select-discipline" multiple required>
-                    <c:forEach items="${disciplines}" var="d">
-                        <option value="${d.id}">${d.discipline}</option>
-                    </c:forEach>
-                </select>
-            </div>
+    <div class="bot">
+        <div class="li2">
+            <p>Дисциплины в семестре</p>
         </div>
 
-        <div class="li5">
-            <%--    <a href="#" class="b2">ПРИМЕНИТЬ</a>--%>
-            <input type="submit" value="ПРИМЕНИТЬ" class="b2">
+
+        <div class="mt30">
+            <select name="newIdsDisciplines" class="select-discipline" multiple required>
+                <c:forEach items="${disciplines}" var="d">
+                    <option value="${d.id}">${d.discipline}</option>
+                </c:forEach>
+            </select>
         </div>
+    </div>
+
+    <div class="li5">
+        <%--    <a href="#" class="b2">ПРИМЕНИТЬ</a>--%>
+        <input type="submit" value="ПРИМЕНИТЬ" class="b2">
+    </div>
     </form>
 </div>
-
 
 
 </body>

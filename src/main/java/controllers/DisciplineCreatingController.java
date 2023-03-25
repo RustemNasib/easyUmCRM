@@ -32,7 +32,7 @@ public class DisciplineCreatingController extends HttpServlet {
         */
 
         //Нужно из запроса request получить данные формы по созданию дисциплины
-        String discipline = req.getParameter("discipline");
+        String discipline = req.getParameter("newDiscipline");
 
         if (discipline == null || discipline.equals("")) {
             req.setAttribute("Error", 1);
@@ -42,21 +42,6 @@ public class DisciplineCreatingController extends HttpServlet {
 
         //Создаем объект подключения к базе данных для вызова метода создать дисциплину
         DBServices dbServices = new DBServices();
-
-//        //Формат даты
-//        //String to Date (преобразовываем формат Стринг в Дату)
-//        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-//        Date dateFromUser;
-//        try {
-//            dateFromUser = format.parse(date);
-//        } catch (ParseException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        //Date to String (преобразовываем формат Дату в Стринг)
-//        Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String dateToBd = formatter.format(dateFromUser);
-
 
         dbServices.createDiscipline(discipline);
 

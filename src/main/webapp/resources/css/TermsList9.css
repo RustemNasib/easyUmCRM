@@ -59,7 +59,8 @@ h1 {
     margin-top: 29px;
     margin-bottom: 40px;
 }
-h2{
+
+h2 {
     width: 297px;
     height: 32px;
     left: 184px;
@@ -75,27 +76,27 @@ h2{
 }
 
 /*меню*/
-.menu{
+.menu {
     margin-bottom: 25px;
     margin-top: 25px;
 }
 
 /*Стилизуем меню по БЭМ*/
-a{
+a {
     /*Убрать стиль ссылок*/
     text-decoration: none;
     /*Цвет текста ссылок*/
     color: #000;
 }
 
-.nav, .menu{
+.nav, .menu {
     display: flex;
     /*  Горизональное выравнивание по центру*/
     align-items: center;
 }
 
 /*Блок*/
-.menu{
+.menu {
     /*  Растянуть блок*/
     width: 100%;
     /*растягиваем в разные стороны*/
@@ -106,14 +107,16 @@ a{
 img {
     margin-right: 33px;
 }
-.background{
+
+.background {
     position: absolute;
     width: 118px;
     height: 118px;
     left: 524px;
     top: 104px;
 }
-.background1{
+
+.background1 {
     position: absolute;
     width: 152px;
     height: 139px;
@@ -121,7 +124,7 @@ img {
     top: 108px;
 }
 
-.nav{
+.nav {
     margin-bottom: 29px;
     margin-top: 18px;
 }
@@ -136,24 +139,27 @@ img {
 }
 
 /*Делаем таблицу*/
-th, td{
+th, td {
     /*  Обводка ячеек*/
     border: 1px solid #2575FC;
 }
+
 /*таблица*/
-table{
+table {
     width: 505px;
     height: 495px;
     /*Убрать промежутки между обводками*/
     border-collapse: collapse;
-    /*  Расстягиваем таблицу на ширину блока container*/
+    /*  Растягиваем таблицу на ширину блока container*/
     /*width: 100%;*/
     /*  Тень таблицы*/
-    box-shadow: 3px 5px 5px rgba(34, 102,218,0.2);
+    box-shadow: 3px 5px 5px rgba(34, 102, 218, 0.2);
     /* Отступаем от заголовка*/
     margin-top: 15px;
-
+    /*Отступ вниз*/
+    margin-bottom: 105px;
 }
+
 /*верхняя строка*/
 thead {
     /*Красим верхнюю строку таблицы и шрифт*/
@@ -163,14 +169,16 @@ thead {
     text-align: left;
     /*размер шрифта текста*/
 }
+
 /*тело таблицы*/
-tbody{
+tbody {
     background: #F0F2F5;
 }
+
 .td {
     /*  Отступы в ячейках*/
-    padding: 37px 0 15px 15px; (верх право низ лево)
-font-size: 18px;
+    padding: 37px 0 15px 15px;
+(верх право низ лево) font-size: 18 px;
 }
 
 
@@ -256,20 +264,20 @@ button:focus {
     text-decoration: none;
 
     /*Граница вокруг кнопки толщина и цвет*/
-    border:1px solid #FF3300;
+    border: 1px solid #FF3300;
 
     /*Закругление формы кнопки*/
-    border-radius:500px;
+    border-radius: 500px;
 
     /*Расстояние от текста до границы*/
-    padding:14px 0;
+    padding: 14px 0;
 
     /*Сделать текст в верхнем регистре, цвет и стиль*/
     text-transform: uppercase;
     color: #FF3300;
-    font-weight:400;
-    font-size:15px;
-    line-height:22px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
 
     /*выравнивание текста и его размера*/
     text-align: center;
@@ -285,7 +293,7 @@ button:focus {
     opacity: 0.9;
 
     /*  Тень для кнопки */
-    box-shadow: 3px 5px 5px rgba(255,51,0,0.2);
+    box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.2);
 
     margin-left: 40px;
     /*margin-top: 17px;*/
@@ -312,13 +320,13 @@ button:focus {
 /*Правильно сделать btn_active*/
 .btn:hover {
     /*Красим фон*/
-    background:#FF3300;
+    background: #FF3300;
     /*  Делаем прозрачность*/
     opacity: 0.9;
     /*  перекрашиваем шрифт что бы был виден*/
     color: #FFF;
     /*  Делаем тень*/
-    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+    box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.6);
 }
 
 
@@ -326,7 +334,8 @@ button:focus {
     margin-top: 30px;
     margin-left: 30px;
 }
-.li3{
+
+.li3 {
     width: 151px;
     height: 29px;
     /*left: 729px;*/
@@ -340,6 +349,7 @@ button:focus {
     color: #000000;
     margin-right: 80px;
 }
+
 /*блок*/
 .li4 {
     box-sizing: border-box;
@@ -348,10 +358,10 @@ button:focus {
     background: #F0F2F5;
     border: 1px solid #2266DA;
     margin-right: 20px;
-    }
+}
 
 /*текст в блоке*/
-.txt{
+.txt {
     width: 84px;
     height: 28px;
     /*left: 11px;*/
@@ -378,7 +388,7 @@ button:focus {
 }
 
 /*красная кнопка*/
-.text{
+.text {
     width: 145px;
     height: 29px;
     font-family: 'Circe';
@@ -389,11 +399,11 @@ button:focus {
     color: #FF3300;
 
     /*Граница вокруг кнопки толщина и цвет*/
-    border:1px solid #FF3300;
+    border: 1px solid #FF3300;
     /*Расстояние от текста до границы*/
-    padding:14px 0;
+    padding: 14px 0;
     /*Закругление формы кнопки*/
-    border-radius:500px;
+    border-radius: 500px;
     /*выравниваем текст по центру*/
     appearance: none;
     display: inline-flex;
@@ -401,31 +411,31 @@ button:focus {
     justify-content: center;
 }
 
-.text:hover{
+.text:hover {
     /*  перекрашиваем шрифт что бы был виден*/
     color: #FFF;
     /*Красим фон*/
-    background:#FF3300;
+    background: #FF3300;
     /*  Делаем прозрачность*/
     opacity: 0.9;
     /*  Делаем тень*/
-    box-shadow:3px 5px 5px rgba(255,51,0,0.6) ;
+    box-shadow: 3px 5px 5px rgba(255, 51, 0, 0.6);
 }
 
-.li6{
+.li6 {
     /*margin-left: 20px;*/
     margin-top: 40px;
     /*margin-bottom: 20px;*/
 }
 
-.but{
+.but {
     /*box-sizing: border-box;*/
     width: 566px;
     height: 149px;
     top: 413px;
 }
 
-.bot{
+.bot {
     /*display: flex;*/
     /*  Горизональное выравнивание по центру*/
     align-items: center;
@@ -434,6 +444,7 @@ button:focus {
     appearance: none;
     display: inline-flex;
 }
+
 .df {
     display: flex;
 }
@@ -441,9 +452,11 @@ button:focus {
 .mr30 {
     margin-right: 30px;
 }
+
 .jcsb {
     justify-content: space-between;
 }
+
 .term {
     /*  Размеры кнопки*/
     width: 208px;
@@ -453,10 +466,10 @@ button:focus {
     text-decoration: none;
 
     /*Граница вокруг кнопки толщина и цвет*/
-    border:1px solid #FF3300;
+    border: 1px solid #FF3300;
 
     /*Закругление формы кнопки*/
-    border-radius:500px;
+    border-radius: 500px;
 
 
 }

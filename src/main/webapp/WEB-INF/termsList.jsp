@@ -110,19 +110,19 @@
                 <!-- Заголовочная строка таблицы-->
                 <thead class="thead">
                 <!--  tr - строка таблицы-->
-                    <tr>
+                <tr>
                     <!--  th- заголовок ячейки таблицы-->
-                        <th class="td">Наименование дисциплины</th>
-                    </tr>
+                    <th class="td">Наименование дисциплины</th>
+                </tr>
                 </thead>
                 <!--tbody - определяет тело таблицы-->
                 <tbody class="tbody">
                 <!--  tr - создание строки таблицы-->
-                    <c:forEach items="${disciplines}" var="d">
-                        <tr>
-                            <td class="td">${d.discipline}</td>
-                        </tr>
-                    </c:forEach>
+                <c:forEach items="${disciplines}" var="d">
+                    <tr>
+                        <td class="td">${d.discipline}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
 
@@ -150,8 +150,8 @@
     </header>
 </div>
 <%--Форма для удаления семестра--%>
-<form action="/termsDelete" method="post" id="formDelete">
-    <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
+<form action="/termsDelete" method="post" id="formDeleteTerm">
+    <input type="hidden" value="" name="hiddenDeleteTerm" id="hiddenDeleteTerm">
 </form>
 
 <%--Форма для модификации семестра--%>
