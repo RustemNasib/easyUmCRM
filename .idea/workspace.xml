@@ -9,21 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes2003">
+    <list default="true" id="b3db3aa6-1c6b-4b4b-8fbd-fd8ef016fe62" name="Changes" comment="changes2503">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineCreatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplineDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DisciplinesListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsCreatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TermsDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentProgressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProgressStudentsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DBServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/IDBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/IDBServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplineCreating.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplinesList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/termsModifying.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/TermsList9.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentProgress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentProgress.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/studentsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/DisciplineModifying8.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/DisciplineModifying8.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/functions.js" afterDir="false" />
     </list>
     <list id="000a6222-ac07-4ac1-96ee-898dee42a632" name="New changelist" comment="" />
@@ -354,7 +347,15 @@
       <workItem from="1679657984539" duration="2893000" />
       <workItem from="1679671226253" duration="73000" />
       <workItem from="1679672758044" duration="486000" />
-      <workItem from="1679727701471" duration="975000" />
+      <workItem from="1679727701471" duration="5511000" />
+      <workItem from="1680030258565" duration="2000" />
+      <workItem from="1680031103430" duration="4000" />
+      <workItem from="1680694099149" duration="594000" />
+      <workItem from="1680870251668" duration="25000" />
+      <workItem from="1680870289892" duration="11524000" />
+      <workItem from="1681108510545" duration="481000" />
+      <workItem from="1681109012600" duration="7422000" />
+      <workItem from="1681119725925" duration="806000" />
     </task>
     <task id="LOCAL-00001" summary="changes 0123">
       <created>1673511702593</created>
@@ -419,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679307788629</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changes2503">
+      <created>1679728818029</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679728818029</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +450,8 @@
     <MESSAGE value="changes 0208" />
     <MESSAGE value="changes 0303" />
     <MESSAGE value="changes2003" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes2003" />
+    <MESSAGE value="changes2503" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes2503" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

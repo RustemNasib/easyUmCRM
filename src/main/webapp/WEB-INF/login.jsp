@@ -3,7 +3,7 @@
 <%--Подключаем jstl библиотеки из сайта https://java-online.ru/jsp-jstl.xhtml--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,7 +37,7 @@
   <div class="container">
     <nav class="nav">
       <!-- Вставляем логотип -->
-      <img src="../resources/images/logo.png" alt="EasyUm IT курсы">
+      <img src="../resources/images/logo.png" alt="EasyUm">
 
       <!-- Пункт меню -->
       <ul class="menu">
@@ -53,8 +53,8 @@
       Система управления студентами и их успеваемостью
     </h1>
      </div>
-  <img src="../resources/images/square_pattern%201.png" class="background">
-  <img src="../resources/images/square_blur%201.png" class="background1">
+<%--  <img src="../resources/images/square_pattern%201.png" class="background">--%>
+<%--  <img src="../resources/images/square_blur%201.png" class="background1">--%>
 
   <!-- Делаем кнопку -->
   <p class="text-center mt50">

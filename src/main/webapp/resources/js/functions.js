@@ -107,7 +107,26 @@ function modifyTerms() {
     //Нажать кнопку программно, что бы отправить форму на сервер
     document.getElementById("formModifyTerm").submit();
 
+}
 
+function idProgressStudent(){
+    //Получаем массив input со всеми вложенными атрибутами которые у нас checked(с галочкой)
+    var checkedCheckBoxes = document.querySelectorAll("input[name=idStudent]:checked");
 
+    // Проверка на наличие галочек
+    if (checkedCheckBoxes.length == 0) {
+        alert("Please select student!");
+        return;
+    }
 
+    //Проверка, что не более одной галочки
+    if (checkedCheckBoxes.length > 1) {
+        alert("Please select only one student!");
+        return;
+    }
+
+    //Заполним value = "" у input formProgressStudent
+    document.getElementById("hiddenProgressStudent").value = checkedCheckBoxes [0].value;
+    //Нажать кнопку программно, что бы отправить форму на сервер
+    document.getElementById("formProgressStudent").submit();
 }

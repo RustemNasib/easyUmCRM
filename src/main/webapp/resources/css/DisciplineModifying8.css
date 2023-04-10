@@ -100,23 +100,63 @@ h2{
     /* Фон кнопки*/
     background: #FCFDFC;
 }
-.b1{
-    padding-left: 30px;
+.b1 {
+    /*padding-left: 30px;*/
+    /*  Размеры кнопки*/
+
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 54px;
+    left: 570px;
+    top: 284px;
+
+    /*  Убрать подчеркивание ссылки*/
+    text-decoration: none;
+
+    /*Граница вокруг кнопки толщина и цвет*/
+    /*border: 1px solid #000000;*/
+    border: 1px solid #2575FC;
+    border-radius: 10px;
+
+    /*Закругление формы кнопки*/
+    border-radius: 500px;
+
+    /*Расстояние от текста до границы*/
+    padding:14px 0;
+
+    /*Сделать текст в верхнем регистре, цвет и стиль*/
+    /*text-transform: uppercase;*/
+    color: #757575;
+    font-weight:400;
+    font-size:15px;
+    line-height:22px;
+
+    /*Задаем свойство блоков ссылкам кнопкам*/
+    display: block;
+
+    /* Фон кнопки*/
+    background: #FCFDFC;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-left: 25px;
 }
 /*Активация при наведении на кнопки*/
 /*Правильно сделать btn_active*/
-.btn:hover {
-    /*Красим фон*/
-    background:#757575;
-    /*  Делаем прозрачность*/
-    opacity: 0.7;
-    /*  перекрашиваем шрифт что бы был виден*/
-    color: #FFF;
-    /*  Делаем тень*/
-    /*box-shadow:#757575 ;*/
-}
+/*.btn:hover {*/
+/*    !*Красим фон*!*/
+/*    background:#757575;*/
+/*    !*  Делаем прозрачность*!*/
+/*    opacity: 0.7;*/
+/*    !*  перекрашиваем шрифт что бы был виден*!*/
+/*    color: #FFF;*/
+/*    !*  Делаем тень*!*/
+/*    !*box-shadow:#757575 ;*!*/
+/*}*/
 
 .b2 {
+
+
     /*  Размеры кнопки*/
     width: 300px;
     height: 70px;

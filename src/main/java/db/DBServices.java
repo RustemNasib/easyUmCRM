@@ -95,7 +95,7 @@ public class DBServices implements IDBServices {
             //вывод ResultSet (значения из базы данных) на консоль
             //делаем цикл, что бы наполнить коллекцию  List <Discipline>disciplines = new ArrayList<>();
             while (rs.next()) {
-                //Создали (подготовили) пустой объект типа студент
+                //Создали (подготовили) пустой объект типа дисциплина
                 Discipline discipline = new Discipline();
 
                 //Достали значение колонки id из базы данных SQL
@@ -576,6 +576,7 @@ public class DBServices implements IDBServices {
         }
 
     }
+
     @Override
     public boolean isItLastTerm() {
         try {
@@ -595,7 +596,7 @@ public class DBServices implements IDBServices {
                 terms.add(term);
             }
 
-            if(terms.size() == 1){
+            if (terms.size() == 1) {
                 return true;
             } else {
                 return false;
@@ -610,6 +611,61 @@ public class DBServices implements IDBServices {
     //Получить все оценки по студенту по семестру
     @Override
     public List<Mark> getMarks(String idStudent, String idTerm) {
+
+        //Проверка idTerm на null -> взять первый из БД
+        if (idTerm == null) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+                //Указываем путь к схеме базы данных, логин и пароль
+                Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+
+                //Statement (выбираем вариант подключения к базе данных sql)
+                //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.term where id = (select min(id) FROM term)");
+                while (rs.next()) {
+                    idTerm = rs.getString("id");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        List<Mark> marks = new ArrayList<>();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            //Указываем путь к схеме базы данных, логин и пароль
+            Connection conn = DriverManager.getConnection(Constants.URL_TO_DB, Constants.LOGIN_TO_DB, Constants.PASSWORD_TO_DB);
+
+            //Statement (выбираем вариант подключения к базе данных sql)
+            //Создаем запрос и формируем взаимодействие с базой данных, через путь и пароль, который указали выше
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM crm_easyum_33.mark\n" +
+                    "LEFT JOIN term_discipline ON mark.id_term_discipline = term_discipline.id\n" +
+                    "LEFT JOIN discipline ON term_discipline.id_discipline = discipline.id WHERE id_term = " + idTerm + " AND id_student = " + idStudent + "; ");
+            while (rs.next()) {
+                Term term = new Term();
+                term.setId(rs.getInt("id_term"));
+
+                Student student = new Student();
+                student.setId(rs.getInt("id_student"));
+
+                Discipline discipline = new Discipline();
+                discipline.setId(rs.getInt("id_discipline"));
+                discipline.setDiscipline(rs.getString("discipline"));
+
+                Mark mark = new Mark();
+                mark.setId(rs.getInt("id"));
+                mark.setStudent(student);
+                mark.setDiscipline(discipline);
+                mark.setMark(rs.getInt("mark"));
+                marks.add(mark);
+            }
+            return marks;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -712,7 +768,7 @@ public class DBServices implements IDBServices {
             }
 
 
-                return term;
+            return term;
 
 
         } catch (Exception e) {

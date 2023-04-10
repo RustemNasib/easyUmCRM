@@ -80,7 +80,8 @@
     <!-- Делаем кнопки -->
     <div class="container buttons">
         <div>
-            <a href="/studentProgress" class="btn">Просмотреть успеваемость выбранных студентов </a>
+<%--            <a href="/studentProgress" class="btn">Просмотреть успеваемость выбранного студента </a>--%>
+    <input type="submit" value="Просмотреть успеваемость выбранного студента" class="btn" onclick="idProgressStudent()">
             <%--            <a href="/studentModifying" class="btn">Модифицировать выбранного студента...</a>--%>
             <%--           настройка права доступа к кнопке --%>
             <c:if test="${role eq 1}">
@@ -148,6 +149,11 @@
 <%--Форма для модификации студента--%>
 <form action="/studentModifying" method="get" id="formModify">
     <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
+</form>
+
+<%--Форма для передачи id студента на страницу прогресса студентов--%>
+<form action="/studentProgress" method="get" id="formProgressStudent">
+    <input type="hidden" value="" name="hiddenProgressStudent" id="hiddenProgressStudent">
 </form>
 
 </body>
